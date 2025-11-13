@@ -63,8 +63,11 @@
                         <a href="program-location.html?location=dali" class="location-btn" data-location="dali" style="background: #f8f9fa; color: #333; padding: 0.8rem; border: 1px solid #e9ecef; border-radius: 6px; cursor: pointer; transition: all 0.3s ease; font-size: 0.9rem; text-decoration: none; text-align: center;">
                             Dali
                         </a>
+                        <a href="program-location.html?location=dalishaxi" class="location-btn" data-location="dalishaxi" style="background: #f8f9fa; color: #333; padding: 0.8rem; border: 1px solid #e9ecef; border-radius: 6px; cursor: pointer; transition: all 0.3s ease; font-size: 0.9rem; text-decoration: none; text-align: center;">
+                            Dali Shaxi
+                        </a>
                         <a href="program-location.html?location=fuxianhu" class="location-btn" data-location="fuxianhu" style="background: #f8f9fa; color: #333; padding: 0.8rem; border: 1px solid #e9ecef; border-radius: 6px; cursor: pointer; transition: all 0.3s ease; font-size: 0.9rem; text-decoration: none; text-align: center;">
-                            Fuxianhu
+                            Fuxian Lake
                         </a>
                         <a href="program-location.html?location=jingmai" class="location-btn" data-location="jingmai" style="background: #f8f9fa; color: #333; padding: 0.8rem; border: 1px solid #e9ecef; border-radius: 6px; cursor: pointer; transition: all 0.3s ease; font-size: 0.9rem; text-decoration: none; text-align: center;">
                             Jingmai Mountain
@@ -76,35 +79,65 @@
                 </div>
 
                 <!-- Right Side - Course Info -->
-                <div class="course-info" style="display: flex; flex-direction: column; justify-content: space-between;">
-                    <div>
-                        <h1 id="location-title" class="section-title" style="color: #e74c3c; margin-bottom: 1rem; font-size: 2rem;">Location Details</h1>
-                        <p id="location-description" style="font-size: 1.1rem; color: #666; margin-bottom: 2rem; line-height: 1.6;">
-                            Learn Chinese in beautiful locations across China with our comprehensive programs.
-                        </p>
-                        
-                        <div style="background: white; border-radius: 12px; padding: 2rem; box-shadow: 0 4px 20px rgba(0,0,0,0.1); border: 1px solid #eee; margin-bottom: 2rem;">
-                            <h3 style="color: #e74c3c; margin-bottom: 1.5rem;">Course Information</h3>
-                            <ul id="course-features" style="list-style: none; padding: 0;">
-                                <li style="margin-bottom: 1rem; display: flex; align-items: center;"><i class="fas fa-check-circle" style="color: #27ae60; margin-right: 1rem; width: 20px;"></i> <span id="feature-1">Course features</span></li>
-                                <li style="margin-bottom: 1rem; display: flex; align-items: center;"><i class="fas fa-check-circle" style="color: #27ae60; margin-right: 1rem; width: 20px;"></i> <span id="feature-2">Learning environment</span></li>
-                                <li style="margin-bottom: 1rem; display: flex; align-items: center;"><i class="fas fa-check-circle" style="color: #27ae60; margin-right: 1rem; width: 20px;"></i> <span id="feature-3">Cultural activities</span></li>
-                                <li style="margin-bottom: 1rem; display: flex; align-items: center;"><i class="fas fa-check-circle" style="color: #27ae60; margin-right: 1rem; width: 20px;"></i> <span id="feature-4">Accommodation options</span></li>
-                                <li style="margin-bottom: 1rem; display: flex; align-items: center;"><i class="fas fa-check-circle" style="color: #27ae60; margin-right: 1rem; width: 20px;"></i> <span id="feature-5">Support services</span></li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border-radius: 12px; padding: 2rem; text-align: center;">
-                        <h3 style="margin-bottom: 1rem;">Pricing</h3>
-                        <div style="margin-bottom: 1rem;">
-                            <span id="price" style="font-size: 2.5rem; font-weight: 700;">¥280</span>
-                            <span style="opacity: 0.9; margin-left: 0.5rem;">per hour</span>
-                        </div>
-                        <p style="opacity: 0.9; margin-bottom: 1rem;" id="pricing-note">Minimum 10 hours booking</p>
-                        <a href="apply.html" class="btn btn-primary" style="background: white; color: #667eea; border: none; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 600;">Book Now</a>
+                <div class="course-info" style="display: flex; flex-direction: column; justify-content: flex-start;">
+                    <h1 id="location-title" class="section-title" style="color: #e74c3c; margin-bottom: 1rem; font-size: 2rem;">Location Details</h1>
+                    <p id="location-description" style="font-size: 1.1rem; color: #666; margin-bottom: 2rem; line-height: 1.6;">
+                        Learn Chinese in beautiful locations across China with our comprehensive programs.
+                    </p>
+                    <div style="background: white; border-radius: 12px; padding: 2rem; box-shadow: 0 4px 20px rgba(0,0,0,0.1); border: 1px solid #eee;">
+                        <h3 style="color: #e74c3c; margin-bottom: 1.5rem;">Key Highlights</h3>
+                        <ul id="highlight-list" style="list-style: none; padding: 0;">
+                            <li style="margin-bottom: 1rem; display: flex; align-items: center;"><i class="fas fa-check-circle" style="color: #27ae60; margin-right: 1rem; width: 20px;"></i> Personalized one-on-one course</li>
+                        </ul>
                     </div>
                 </div>
+            </div>
+            <div id="location-details" style="margin-top: 3rem; display: flex; flex-direction: column; gap: 2.5rem;">
+                <section aria-labelledby="course-section-title" style="background: #fff; border-radius: 12px; padding: 2.5rem; box-shadow: 0 4px 24px rgba(0,0,0,0.08); border: 1px solid #eee;">
+                    <h2 id="course-section-title" style="color: #e74c3c; margin-bottom: 1rem; font-size: 1.6rem;">One on one personalized course</h2>
+                    <p id="course-intro" style="color: #555; line-height: 1.7; margin-bottom: 1.5rem;">We customize your course based on your level, goals, and cultural interests.</p>
+                    <div id="course-types" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-bottom: 1.5rem;"></div>
+                    <p id="course-schedule" style="color: #555; line-height: 1.7; margin-bottom: 1rem;"></p>
+                    <p id="course-practice" style="color: #555; line-height: 1.7;"></p>
+                </section>
+
+                <section aria-labelledby="experience-title" style="background: #fff; border-radius: 12px; padding: 2.5rem; box-shadow: 0 4px 24px rgba(0,0,0,0.08); border: 1px solid #eee;">
+                    <h2 id="experience-title" style="color: #e74c3c; margin-bottom: 1rem; font-size: 1.6rem;">Immersive experiences</h2>
+                    <div id="experience-sections" style="display: flex; flex-direction: column; gap: 1.5rem;"></div>
+                </section>
+
+                <section aria-labelledby="tutor-title" style="background: #fff; border-radius: 12px; padding: 2.5rem; box-shadow: 0 4px 24px rgba(0,0,0,0.08); border: 1px solid #eee;">
+                    <h2 id="tutor-title" style="color: #e74c3c; margin-bottom: 1rem; font-size: 1.6rem;">Excellent tutors</h2>
+                    <p id="tutor-description" style="color: #555; line-height: 1.7; margin-bottom: 1.5rem;">All tutors hold professional certificates and have extensive teaching experience.</p>
+                    <a id="tutor-link" href="#" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 0.5rem;">
+                        <span>More info about tutor team</span> <i class="fas fa-arrow-right"></i>
+                    </a>
+                </section>
+
+                <section aria-labelledby="accommodation-title" style="background: #fff; border-radius: 12px; padding: 2.5rem; box-shadow: 0 4px 24px rgba(0,0,0,0.08); border: 1px solid #eee;">
+                    <h2 id="accommodation-title" style="color: #e74c3c; margin-bottom: 1rem; font-size: 1.6rem;">Accommodation</h2>
+                    <p id="accommodation-description" style="color: #555; line-height: 1.7;"></p>
+                </section>
+
+                <section aria-labelledby="transport-title" style="background: #fff; border-radius: 12px; padding: 2.5rem; box-shadow: 0 4px 24px rgba(0,0,0,0.08); border: 1px solid #eee;">
+                    <h2 id="transport-title" style="color: #e74c3c; margin-bottom: 1rem; font-size: 1.6rem;">How to get here</h2>
+                    <p id="transport-description" style="color: #555; line-height: 1.7;"></p>
+                </section>
+
+                <section aria-labelledby="pricing-title" style="background: #fff; border-radius: 12px; padding: 2.5rem; box-shadow: 0 4px 24px rgba(0,0,0,0.08); border: 1px solid #eee;">
+                    <h2 id="pricing-title" style="color: #e74c3c; margin-bottom: 1rem; font-size: 1.6rem;">Pricing</h2>
+                    <p id="pricing-tagline" style="color: #555; font-weight: 600; margin-bottom: 1.5rem;"></p>
+                    <div id="pricing-options" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-bottom: 1.5rem;"></div>
+                    <p id="pricing-note" style="color: #555; line-height: 1.7; margin-bottom: 1.5rem;"></p>
+                    <h3 style="color: #2c3e50; margin-bottom: 1rem; font-size: 1.3rem;">The fee includes:</h3>
+                    <ul id="fee-includes" style="columns: 2; column-gap: 2rem; list-style: none; padding: 0; margin-bottom: 1.5rem;">
+                        <li style="margin-bottom: 0.5rem; position: relative; padding-left: 1.5rem;"><i class="fas fa-check" style="color: #27ae60; position: absolute; left: 0;"></i> Personalized Chinese course</li>
+                    </ul>
+                    <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 12px; padding: 2rem; color: white; text-align: center;">
+                        <p id="pricing-headline" style="font-size: 1.2rem; font-weight: 600; margin-bottom: 1rem;">Ready to launch your Chinese learning journey?</p>
+                        <a id="pricing-cta" href="apply.html" class="btn btn-primary" style="background: white; color: #667eea; border: none; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 600;">Apply now</a>
+                    </div>
+                </section>
             </div>
         </div>
     </section>
@@ -126,10 +159,10 @@
                 <div class="footer-section">
                     <h3>Programs</h3>
                     <ul>
-                        <li><a href="program.html">Intensive Chinese</a></li>
-                        <li><a href="program.html">Business Chinese</a></li>
-                        <li><a href="program.html">Summer Intensive</a></li>
-                        <li><a href="program.html">HSK Preparation</a></li>
+                        <li><a href="program.html">One on one Intensive Chinese</a></li>
+                        <li><a href="program.html">One on one Business Chinese</a></li>
+                        <li><a href="program.html">One on one Travel Chinese</a></li>
+                        <li><a href="program.html">One on one HSK preparation</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
@@ -191,82 +224,463 @@
             {
                 id: 'kunming',
                 title: 'Kunming HQ',
-                description: 'Our main campus located in the heart of Kunming, offering state-of-the-art facilities and comprehensive Chinese language programs.',
-                videoTitle: 'Kunming HQ Campus Tour',
-                videoDescription: 'Take a virtual tour of our main campus in Kunming',
-                features: [
-                    'Full campus facilities',
-                    'Modern classrooms',
-                    'Library and study areas',
-                    'Cultural activities center',
-                    'Student accommodation nearby'
+                description: 'Kunming, the "City of Eternal Spring" with pleasant climate and beautiful scenery, offers the perfect environment for learning Chinese while experiencing the collision of modern urban life and traditional Chinese culture.',
+                videoTitle: 'Kunming HQ campus tour',
+                videoDescription: 'Experience our Kunming headquarters and discover your new campus.',
+                highlights: [
+                    'One on one personalized course',
+                    'Rich supporting facilities',
+                    'Excellent tutors with professional certificates and rich experience',
+                    '3 meals Monday to Friday and accommodation included'
                 ],
-                price: '¥280',
-                pricingNote: 'Minimum 10 hours booking'
+                course: {
+                    intro: 'We will tailor your course to your personal demand and language level and match you with the tutor who is most suitable for you.',
+                    courseTypes: [
+                        { name: 'One on one Intensive Chinese', description: 'One on one intensive course for all language level/goals and culture demand' },
+                        { name: 'One on one HSK preparation', description: 'Personalized coaching focused on HSK goals' },
+                        { name: 'One on one Business Chinese', description: 'Specialized training for business communication and career development' },
+                        { name: 'One on one Travel Chinese', description: 'Practical Chinese designed for exploring China with confidence' }
+                    ],
+                    schedule: 'Classes are held from Monday to Friday. You can choose to study 4 hours, 5 hours, or 6 hours per day with flexible scheduling adjusted to your needs.',
+                    practice: 'We adopt a learning-practice combination model. Your tutor creates rich real-world contexts, accompanies you in all-Chinese speaking environments, and helps you integrate naturally into local life.'
+                },
+                experiences: {
+                    title: 'Abundant supporting facilities & vibrant city life',
+                    sections: [
+                        {
+                            title: 'All-in-one campus facilities',
+                            paragraphs: [
+                                'Our main campus is located in the core of Kunming city center, offering the most convenient and comprehensive learning and living facilities.',
+                                'Full campus facilities, modern classrooms, library and study areas, leisure space, and a cultural activities center are all available.'
+                            ],
+                            bullets: [
+                                'Study areas',
+                                'Leisure areas',
+                                'Public communal areas'
+                            ]
+                        },
+                        {
+                            title: 'Life moments right downstairs',
+                            paragraphs: [
+                                'All the life scenes you need are at your side—you only need to go downstairs to encounter the vivid local life.'
+                            ],
+                            bullets: [
+                                'Cafes',
+                                'Gyms',
+                                'Cinemas',
+                                'Live houses',
+                                'Bars',
+                                'Shopping malls',
+                                'Restaurants',
+                                'Snack streets and food courts',
+                                'Open-air markets',
+                                'Supermarkets',
+                                'Banks'
+                            ]
+                        },
+                        {
+                            title: 'Connected city transport',
+                            paragraphs: [
+                                'It is also very convenient to explore the rest of the city with nearby subway and bus stations.'
+                            ]
+                        }
+                    ]
+                },
+                tutors: {
+                    description: 'All tutors undergo comprehensive training and hold CTCSOL or national teacher qualification certificates together with rich teaching experience. Lessons stay patient, professional, and engaging while using diverse methods to solve learning challenges.',
+                    linkText: 'More info about tutor team',
+                    linkHref: 'about.html#team'
+                },
+                accommodation: {
+                    description: 'Accommodation is right next to the main campus. Enjoy an independent room with private bathroom, daily room cleaning, 24-hour hot water, air conditioning, WiFi, and all essential living facilities.'
+                },
+                transport: {
+                    description: 'Kunming is located in Yunnan Province in southwest China. The most convenient way to arrive is by plane to Kunming Changshui International Airport, which operates 33 international routes across 17 countries and regions.'
+                },
+                pricing: {
+                    tagline: 'Special offer!',
+                    options: [
+                        { label: '4 hours per day (20 hours a week)', price: '$688 / week' },
+                        { label: '5 hours per day (25 hours a week)', price: '$785 / week' },
+                        { label: '6 hours per day (30 hours a week)', price: '$880 / week' }
+                    ],
+                    note: '',
+                    includes: [
+                        'Personalized Chinese course per week',
+                        'Program certificate',
+                        '3 meals Monday to Friday and accommodation',
+                        'Airport pick-up and drop-off',
+                        'Orientation',
+                        'All campus facilities',
+                        'Room cleaning everyday',
+                        'Free coffee everyday (Kunming HQ only)',
+                        'Free WiFi',
+                        'After-class activities and cultural activities (Kunming HQ)',
+                        'Commonly used medicines',
+                        '24/7 support',
+                        'Visa support materials'
+                    ],
+                    headline: 'Ready to launch your Chinese learning journey?',
+                    ctaText: 'Apply now',
+                    ctaUrl: 'apply.html'
+                }
             },
             {
                 id: 'dali',
                 title: 'Dali',
-                description: 'Study Chinese in the historic city of Dali, surrounded by the beautiful Erhai Lake and rich cultural heritage.',
-                videoTitle: 'Dali Cultural Experience',
-                videoDescription: 'Discover the charm of learning Chinese in historic Dali',
-                features: [
-                    'Historic city setting',
-                    'Erhai Lake views',
-                    'Traditional architecture',
-                    'Cultural immersion activities',
-                    'Local homestay options'
+                description: 'Study Chinese in the historic city of Dali, surrounded by Erhai Lake, ancient alleyways, and Bai ethnic culture.',
+                videoTitle: 'Dali cultural experience',
+                videoDescription: 'Discover the charm of learning Chinese in historic Dali.',
+                highlights: [
+                    'Immersive one-on-one courses',
+                    'Historic old town atmosphere',
+                    'Excursions around Erhai Lake',
+                    'Homestay-style accommodation options'
                 ],
-                price: '¥260',
-                pricingNote: 'Cultural activities included'
+                course: {
+                    intro: 'Build a personalized learning plan that connects your Chinese study with Dali\'s rich cultural backdrop.',
+                    courseTypes: [
+                        { name: 'One on one Intensive Chinese', description: 'Rapid progress tailored to your goals in Dali\'s inspiring setting' },
+                        { name: 'One on one Business Chinese', description: 'Develop professional communication with cultural insights' },
+                        { name: 'One on one Travel Chinese', description: 'Learn essential language for exploring Dali and beyond' },
+                        { name: 'One on one HSK preparation', description: 'Focused preparation for every HSK level' }
+                    ],
+                    schedule: 'Weekday classes with flexible 4h/5h/6h daily schedules to match your pace.',
+                    practice: 'Blend classroom study with real-life practice around the old town, markets, and lakeside communities.'
+                },
+                experiences: {
+                    title: 'Historic culture & Erhai lakeside life',
+                    sections: [
+                        {
+                            title: 'Cultural immersion',
+                            paragraphs: [
+                                'Visit ancient architecture, explore vibrant local markets, and experience Bai ethnic traditions up close.'
+                            ]
+                        },
+                        {
+                            title: 'Lake and mountain adventures',
+                            paragraphs: [
+                                'Spend your free time around Erhai Lake, cycling through villages or hiking Cangshan Mountain for unforgettable views.'
+                            ]
+                        }
+                    ]
+                },
+                tutors: {
+                    description: 'Our dedicated tutors travel with you through language and culture, ensuring every lesson stays meaningful and practical.',
+                    linkText: 'More info about tutor team',
+                    linkHref: 'about.html#team'
+                },
+                accommodation: {
+                    description: 'Stay in carefully selected guesthouses within Dali Old Town or nearby villages, with private rooms and local breakfasts available.'
+                },
+                transport: {
+                    description: 'Reach Dali via high-speed rail or short domestic flights from Kunming. Our team helps coordinate transfers from Dali Railway Station or airport.'
+                },
+                pricing: {
+                    tagline: 'Custom pricing packages',
+                    options: [
+                        { label: 'Tailored weekly programs', price: 'Contact us' }
+                    ],
+                    note: 'Tell us your study goals and length of stay to receive a personalized quote.',
+                    includes: [
+                        'One-on-one Chinese classes',
+                        'Cultural immersion activities',
+                        'Accommodation coordination',
+                        'Local support team assistance'
+                    ],
+                    headline: 'Ready to plan your stay in Dali?',
+                    ctaText: 'Talk to us',
+                    ctaUrl: 'contact.html'
+                }
+            },
+            {
+                id: 'dalishaxi',
+                title: 'Dali Shaxi',
+                description: 'Shaxi is a thousand-year-old town in Dali, Yunnan, situated along the Ancient Tea-Horse Road. It remains the only surviving ancient market on the route, lovingly preserving its original appearance and offering a simple, peaceful rhythm of life—perfect for immersive language learning.',
+                videoTitle: 'Dali Shaxi overview',
+                videoDescription: 'Discover slow and peaceful village life in Shaxi while learning Chinese.',
+                highlights: [
+                    'One on one personalized course',
+                    'Immersive culture, scenery, and local life experiences',
+                    'Excellent tutors with professional certificates',
+                    '3 meals Monday to Friday and accommodation included'
+                ],
+                course: {
+                    intro: 'We tailor every course to your personal goals and language level, matching you with the tutor who fits you best.',
+                    courseTypes: [
+                        { name: 'One on one Intensive Chinese', description: 'Intensive one-on-one lessons for every language level, goal, and cultural interest' },
+                        { name: 'One on one Travel Chinese', description: 'Practical language training designed for confident travel across China' },
+                        { name: 'One on one HSK preparation', description: 'Targeted preparation for every stage of the HSK exams' }
+                    ],
+                    schedule: 'Classes run every Monday to Friday. Choose 4, 5, or 6 study hours per day—your tutor adapts the daily schedule to your evolving needs.',
+                    practice: 'Your tutor not only guides you toward your learning goals but also builds rich real-world scenarios, accompanying you to practice in an all-Chinese environment so learning and life blend naturally.'
+                },
+                experiences: {
+                    title: 'Immersive experiences of culture, scenery, and local life',
+                    sections: [
+                        {
+                            title: '',
+                            bullets: [
+                                'Feel the warmth of books inside Xianfeng Bookstore (the Librairie Avant-Garde) nestled in the countryside',
+                                'Meet distinctive cultural and creative works crafted by local artists',
+                                'Experience ancient handicrafts and take your own artwork home',
+                                'Try turning fresh roses into cakes with local culinary magic',
+                                'Stroll along ancient streets and buildings that echo the Tea-Horse Road',
+                                'Sip a cup of coffee by the fields and embrace the peaceful pace of life',
+                                'Take in the serene scenery that quiets your heart',
+                                'Join the weekly market and experience the simplicity of village life'
+                            ]
+                        }
+                    ]
+                },
+                tutors: {
+                    description: 'All tutors in our team complete comprehensive training and hold CTCSOL (Certificate for Teachers of Chinese to Speakers of Other Languages) or national teacher qualification certificates. They bring rich teaching experience, patient guidance, and diverse methods that make every lesson engaging and practical.',
+                    linkText: 'More info about tutors team',
+                    linkHref: 'about.html#team'
+                },
+                accommodation: {
+                    description: 'Stay in locally inspired accommodation featuring a private room and bathroom. Enjoy a clean, tidy, safe, and comfortable environment with daily room cleaning, 24-hour hot water, WiFi, and all essential living facilities included.'
+                },
+                transport: {
+                    description: 'Fly into Kunming first, then take the high-speed rail to Dali—the most convenient way to reach the region. We will greet you in Dali and provide a complimentary ride to beautiful Shaxi.'
+                },
+                pricing: {
+                    tagline: 'Special offer!',
+                    options: [
+                        { label: '4 hours per day (20 hours a week)', price: '$1400 / week' },
+                        { label: '5 hours per day (25 hours a week)', price: '$1590 / week' },
+                        { label: '6 hours per day (30 hours a week)', price: '$1730 / week' }
+                    ],
+                    note: '',
+                    includes: [
+                        'Personalized Chinese classes per week',
+                        'Program certificate',
+                        '3 meals Monday to Friday and accommodation',
+                        'Kunming airport pick-up and drop-off',
+                        'Pick-up and drop-off between Shaxi and Dali railway station',
+                        'Orientation',
+                        'All campus facilities',
+                        'Room cleaning every day',
+                        'Free WiFi',
+                        'Commonly used medicines',
+                        '24/7 support',
+                        'Visa support materials'
+                    ],
+                    headline: 'Ready to launch your Chinese learning journey?',
+                    ctaText: 'Apply now',
+                    ctaUrl: 'apply.html'
+                }
             },
             {
                 id: 'fuxianhu',
-                title: 'Fuxianhu',
-                description: 'Experience peaceful learning by the crystal-clear Fuxian Lake, perfect for intensive study and reflection.',
-                videoTitle: 'Fuxianhu Lakeside Learning',
-                videoDescription: 'Peaceful study environment by Fuxian Lake',
-                features: [
-                    'Lakeside location',
-                    'Peaceful environment',
-                    'Small group classes',
-                    'Nature activities',
-                    'Resort-style accommodation'
+                title: 'Fuxian Lake',
+                description: 'In beautiful Yunnan, Fuxian Lake shines like a pearl. Clear waters surrounded by mountains create a peaceful classroom in nature.',
+                videoTitle: 'Fuxian Lake lakeside learning',
+                videoDescription: 'Peaceful study environment by the shores of Fuxian Lake.',
+                highlights: [
+                    'One on one personalized course',
+                    'Immersive experiences of scenery, history, and local life',
+                    'Excellent tutors with professional certificates',
+                    '3 meals Monday to Friday and accommodation included'
                 ],
-                price: '¥300',
-                pricingNote: 'Premium location pricing'
+                course: {
+                    intro: 'We will tailor your course to your personal demand and language level, and match you with the tutor who is most suitable for you.',
+                    courseTypes: [
+                        { name: 'One on one Intensive Chinese', description: 'One on one intensive course for all language level/goals and culture demand' },
+                        { name: 'One on one Travel Chinese', description: 'Designed for travelers seeking confident communication' },
+                        { name: 'One on one HSK preparation', description: 'Comprehensive preparation for Chinese proficiency tests' }
+                    ],
+                    schedule: 'Classes run Monday to Friday with flexible 4h/5h/6h per day options to fit your rhythm.',
+                    practice: 'Tutors accompany you into authentic settings around the lake, connecting classroom learning with real scenarios and local life.'
+                },
+                experiences: {
+                    title: 'Immersive experiences of scenery, history, and local life',
+                    sections: [
+                        {
+                            title: '',
+                            bullets: [
+                                'Get close to nature in the Moon Bay Wetland',
+                                'Meet extraordinary lakeside beauty painted by nature',
+                                'Set sail against the wind and try your favorite water sports',
+                                'Climb Bijia Mountain nestled beside the lake and enjoy the gentle breeze',
+                                'Visit the Yunnan Provincial Museum of Natural History on the Fuxian Lake fossil site and listen to the story of life evolution'
+                            ]
+                        }
+                    ]
+                },
+                tutors: {
+                    description: 'All tutors undergo comprehensive training and hold CTCSOL or national teacher qualification certificates, providing patient, professional, and targeted teaching.',
+                    linkText: 'More info about tutor team',
+                    linkHref: 'about.html#team'
+                },
+                accommodation: {
+                    description: 'Accommodation is very close to Fuxian Lake with private rooms, daily cleaning, 24-hour hot water, and WiFi for a safe and comfortable stay.'
+                },
+                transport: {
+                    description: 'Fuxian Lake is located in Yuxi city, around 60 km from Kunming. The most convenient way is a 1.5-hour taxi ride, and you can easily use Didi to hail a ride in China.'
+                },
+                pricing: {
+                    tagline: 'Special offer!',
+                    options: [
+                        { label: '4 hours per day (20 hours a week)', price: '$1300 / week' },
+                        { label: '5 hours per day (25 hours a week)', price: '$1490 / week' },
+                        { label: '6 hours per day (30 hours a week)', price: '$1630 / week' }
+                    ],
+                    note: '',
+                    includes: [
+                        'Personalized Chinese classes per week',
+                        'Program certificate',
+                        '3 meals Monday to Friday and accommodation',
+                        'Kunming airport pick-up and drop-off',
+                        'Orientation',
+                        'All campus facilities',
+                        'Moon Bay Wetland Park fees',
+                        'Room cleaning everyday',
+                        'Free WiFi',
+                        'Commonly used medicines',
+                        '24/7 support',
+                        'Visa support materials'
+                    ],
+                    headline: 'Ready to launch your Chinese learning journey?',
+                    ctaText: 'Apply now',
+                    ctaUrl: 'apply.html'
+                }
             },
             {
                 id: 'jingmai',
-                title: 'Jingmai Mountain',
-                description: 'Immerse yourself in tea culture while learning Chinese in the famous tea mountains of Jingmai.',
-                videoTitle: 'Tea Mountain Learning',
-                videoDescription: 'Learn Chinese in the famous tea mountains',
-                features: [
-                    'Tea mountain setting',
-                    'Tea culture immersion',
-                    'Traditional tea ceremonies',
-                    'Mountain hiking activities',
-                    'Local tea farmer interactions'
+                title: 'Jingmai Tea Mountain',
+                description: 'Jingmai Tea Mountain is famous for its ancient tea forests, minority villages, and poetic scenery—perfect for immersive language learning.',
+                videoTitle: 'Tea mountain learning',
+                videoDescription: 'Learn Chinese in the famous tea mountains.',
+                highlights: [
+                    'One on one personalized course',
+                    'Immersive experiences of scenery, culture, and local life',
+                    'Excellent tutors with professional certificates',
+                    '3 meals Monday to Friday and accommodation included'
                 ],
-                price: '¥290',
-                pricingNote: 'Tea culture activities included'
+                course: {
+                    intro: 'We will tailor your course to your personal demand and language level, and match you with the tutor who is most suitable for you.',
+                    courseTypes: [
+                        { name: 'One on one Intensive Chinese', description: 'One on one intensive course for all language level/goals and culture demand' },
+                        { name: 'One on one Travel Chinese', description: 'Connect language learning with tea mountain adventures' },
+                        { name: 'One on one HSK preparation', description: 'Focused preparation for Chinese proficiency tests' }
+                    ],
+                    schedule: 'Classes run Monday to Friday with flexible 4h/5h/6h per day options to match your pace.',
+                    practice: 'Tutors combine lessons with real-life tea culture experiences, helping you integrate learning with daily local life.'
+                },
+                experiences: {
+                    title: 'Immersive experiences of scenery, culture, and local life',
+                    sections: [
+                        {
+                            title: '',
+                            bullets: [
+                                'See how nature turns mountains, clouds, and trees into paintings',
+                                'Feel the charm of thousand-year-old tea trees',
+                                'Pick fresh tea leaves with locals and experience the full tea-making process',
+                                'Walk through ethnic minority villages and admire traditional architecture',
+                                'Immerse yourself in Bulang and Dai cultures and daily life'
+                            ]
+                        }
+                    ]
+                },
+                tutors: {
+                    description: 'All tutors hold CTCSOL or national teacher qualification certificates, delivering patient, professional, and engaging lessons tailored to you.',
+                    linkText: 'More info about tutor team',
+                    linkHref: 'about.html#team'
+                },
+                accommodation: {
+                    description: 'Live among local villages with private rooms, daily cleaning, 24-hour hot water, WiFi, and essential living facilities for a comfortable stay.'
+                },
+                transport: {
+                    description: 'Travel to Kunming by plane, take the high-speed rail to Pu\'er City, and we will pick you up for a complimentary ride to Jingmai Tea Mountain.'
+                },
+                pricing: {
+                    tagline: 'Special offer!',
+                    options: [
+                        { label: '4 hours per day (20 hours a week)', price: '$1740 / week' },
+                        { label: '5 hours per day (25 hours a week)', price: '$1920 / week' },
+                        { label: '6 hours per day (30 hours a week)', price: '$2050 / week' }
+                    ],
+                    note: '',
+                    includes: [
+                        'Personalized Chinese classes per week',
+                        'Program certificate',
+                        '3 meals Monday to Friday and accommodation',
+                        'Kunming airport pick-up and drop-off',
+                        'Pu\'er to Jingmai Tea Mountain transfers',
+                        'Orientation',
+                        'All campus facilities',
+                        'Room cleaning everyday',
+                        'Free WiFi',
+                        'Commonly used medicines',
+                        '24/7 support',
+                        'Visa support materials'
+                    ],
+                    headline: 'Ready to launch your Chinese learning journey?',
+                    ctaText: 'Apply now',
+                    ctaUrl: 'apply.html'
+                }
             },
             {
                 id: 'tengchong',
                 title: 'Tengchong',
-                description: 'Study in Tengchong, known for its volcanic hot springs and unique geological features.',
-                videoTitle: 'Tengchong Volcanic Region',
-                videoDescription: 'Explore the unique volcanic landscape of Tengchong',
-                features: [
-                    'Volcanic hot springs',
-                    'Unique geological features',
-                    'Thermal spa experiences',
-                    'Nature exploration',
-                    'Geothermal energy learning'
+                description: 'Study in Tengchong, known for volcanic hot springs, geothermal wonders, and lush forests that inspire language learning.',
+                videoTitle: 'Tengchong volcanic region',
+                videoDescription: 'Explore the unique volcanic landscape of Tengchong.',
+                highlights: [
+                    'One on one personalized course',
+                    'Hot spring and volcano excursions',
+                    'Professional teaching team',
+                    'Flexible study schedules'
                 ],
-                price: '¥270',
-                pricingNote: 'Hot spring access included'
+                course: {
+                    intro: 'Customize your Tengchong study plan around hot spring wellness and language goals.',
+                    courseTypes: [
+                        { name: 'One on one Intensive Chinese', description: 'Make rapid progress with tailored lessons in Tengchong' },
+                        { name: 'One on one Travel Chinese', description: 'Learn the language you need for exploring Yunnan and Southeast Asia' },
+                        { name: 'One on one HSK preparation', description: 'Structured path toward your target HSK results' }
+                    ],
+                    schedule: 'Weekday lessons with flexible 4h/5h/6h per day options plus weekend excursions.',
+                    practice: 'Pair lessons with guided practice around geothermal parks, historic towns, and tea plantations.'
+                },
+                experiences: {
+                    title: 'Volcanic landscapes & hot spring relaxation',
+                    sections: [
+                        {
+                            title: '',
+                            paragraphs: [
+                                'Unwind in Tengchong\'s famed hot springs, hike volcanic craters, and explore the Gaoligong Mountains for unforgettable cultural and natural experiences.'
+                            ]
+                        }
+                    ]
+                },
+                tutors: {
+                    description: 'Experienced tutors keep classes practical and engaging, ensuring you apply new language during every excursion.',
+                    linkText: 'More info about tutor team',
+                    linkHref: 'about.html#team'
+                },
+                accommodation: {
+                    description: 'Stay near hot spring resorts or boutique guesthouses with private rooms and reliable amenities.'
+                },
+                transport: {
+                    description: 'Fly into Tengchong Tuofeng Airport or travel via Baoshan with onward ground transportation. We assist with all arrangements.'
+                },
+                pricing: {
+                    tagline: 'Custom pricing packages',
+                    options: [
+                        { label: 'Tailored weekly programs', price: 'Contact us' }
+                    ],
+                    note: 'Share your study goals to receive a customized Tengchong program plan.',
+                    includes: [
+                        'One-on-one Chinese classes',
+                        'Hot spring and volcanic site activities',
+                        'Accommodation coordination',
+                        'Local support team assistance'
+                    ],
+                    headline: 'Plan your Tengchong adventure',
+                    ctaText: 'Talk to us',
+                    ctaUrl: 'contact.html'
+                }
             }
         ];
 
@@ -305,27 +719,159 @@
             if (!location) return;
 
             // Update video section
-            document.getElementById('video-title').textContent = location.videoTitle;
-            document.getElementById('video-description').textContent = location.videoDescription;
+            document.getElementById('video-title').textContent = location.videoTitle || 'Location video';
+            document.getElementById('video-description').textContent = location.videoDescription || 'Discover this location.';
 
-            // Update course info
+            // Update summary
             document.getElementById('location-title').textContent = location.title;
             document.getElementById('location-description').textContent = location.description;
 
             // Update breadcrumb
             document.getElementById('breadcrumb-location').textContent = location.title;
 
-            // Update features
-            const features = document.querySelectorAll('#course-features li span');
-            location.features.forEach((feature, index) => {
-                if (features[index]) {
-                    features[index].textContent = feature;
-                }
-            });
+            // Update highlights
+            const highlightList = document.getElementById('highlight-list');
+            highlightList.innerHTML = '';
+            if (Array.isArray(location.highlights) && location.highlights.length > 0) {
+                location.highlights.forEach(highlight => {
+                    const item = document.createElement('li');
+                    item.style.marginBottom = '1rem';
+                    item.style.display = 'flex';
+                    item.style.alignItems = 'center';
+                    item.innerHTML = `<i class="fas fa-check-circle" style="color: #27ae60; margin-right: 1rem; width: 20px;"></i> ${highlight}`;
+                    highlightList.appendChild(item);
+                });
+            }
+
+            // Update course section
+            document.getElementById('course-intro').textContent = location.course?.intro || '';
+            const courseTypesContainer = document.getElementById('course-types');
+            courseTypesContainer.innerHTML = '';
+            if (location.course?.courseTypes) {
+                location.course.courseTypes.forEach(type => {
+                    const card = document.createElement('div');
+                    card.style.background = '#f8f9fa';
+                    card.style.border = '1px solid #e9ecef';
+                    card.style.borderRadius = '10px';
+                    card.style.padding = '1.5rem';
+                    card.innerHTML = `<h4 style="color: #2c3e50; margin-bottom: 0.5rem; font-size: 1.05rem;">${type.name}</h4><p style="color: #555; line-height: 1.6; font-size: 0.95rem;">${type.description}</p>`;
+                    courseTypesContainer.appendChild(card);
+                });
+            }
+            const scheduleEl = document.getElementById('course-schedule');
+            if (location.course?.schedule) {
+                scheduleEl.textContent = location.course.schedule;
+                scheduleEl.style.display = 'block';
+            } else {
+                scheduleEl.textContent = '';
+                scheduleEl.style.display = 'none';
+            }
+            const practiceEl = document.getElementById('course-practice');
+            if (location.course?.practice) {
+                practiceEl.textContent = location.course.practice;
+                practiceEl.style.display = 'block';
+            } else {
+                practiceEl.textContent = '';
+                practiceEl.style.display = 'none';
+            }
+
+            // Update experiences
+            document.getElementById('experience-title').textContent = location.experiences?.title || 'Immersive experiences';
+            const experienceContainer = document.getElementById('experience-sections');
+            experienceContainer.innerHTML = '';
+            if (location.experiences?.sections) {
+                location.experiences.sections.forEach(section => {
+                    const block = document.createElement('div');
+                    if (section.title) {
+                        const heading = document.createElement('h3');
+                        heading.textContent = section.title;
+                        heading.style.color = '#2c3e50';
+                        heading.style.marginBottom = '0.5rem';
+                        heading.style.fontSize = '1.1rem';
+                        block.appendChild(heading);
+                    }
+                    if (Array.isArray(section.paragraphs)) {
+                        section.paragraphs.forEach(paragraph => {
+                            const p = document.createElement('p');
+                            p.textContent = paragraph;
+                            p.style.color = '#555';
+                            p.style.lineHeight = '1.7';
+                            p.style.marginBottom = '0.75rem';
+                            block.appendChild(p);
+                        });
+                    }
+                    if (Array.isArray(section.bullets) && section.bullets.length > 0) {
+                        const list = document.createElement('ul');
+                        list.style.listStyle = 'disc';
+                        list.style.marginLeft = '1.5rem';
+                        list.style.color = '#555';
+                        list.style.lineHeight = '1.7';
+                        section.bullets.forEach(bullet => {
+                            const li = document.createElement('li');
+                            li.textContent = bullet;
+                            li.style.marginBottom = '0.5rem';
+                            list.appendChild(li);
+                        });
+                        block.appendChild(list);
+                    }
+                    experienceContainer.appendChild(block);
+                });
+            }
+
+            // Update tutors
+            document.getElementById('tutor-description').textContent = location.tutors?.description || '';
+            const tutorLink = document.getElementById('tutor-link');
+            const tutorLinkText = location.tutors?.linkText || 'Meet our tutors';
+            tutorLink.innerHTML = `<span>${tutorLinkText}</span> <i class="fas fa-arrow-right"></i>`;
+            tutorLink.href = location.tutors?.linkHref || '#';
+
+            // Update accommodation and transport
+            document.getElementById('accommodation-description').textContent = location.accommodation?.description || '';
+            document.getElementById('transport-description').textContent = location.transport?.description || '';
 
             // Update pricing
-            document.getElementById('price').textContent = location.price;
-            document.getElementById('pricing-note').textContent = location.pricingNote;
+            document.getElementById('pricing-tagline').textContent = location.pricing?.tagline || '';
+            const pricingOptions = document.getElementById('pricing-options');
+            pricingOptions.innerHTML = '';
+            if (Array.isArray(location.pricing?.options)) {
+                location.pricing.options.forEach(option => {
+                    const optionCard = document.createElement('div');
+                    optionCard.style.background = '#f8f9fa';
+                    optionCard.style.border = '1px solid #e9ecef';
+                    optionCard.style.borderRadius = '10px';
+                    optionCard.style.padding = '1.5rem';
+                    optionCard.style.textAlign = 'center';
+                    optionCard.innerHTML = `<p style="color: #2c3e50; font-weight: 600; margin-bottom: 0.5rem;">${option.label}</p><p style="color: #e74c3c; font-size: 1.2rem; font-weight: 700;">${option.price}</p>`;
+                    pricingOptions.appendChild(optionCard);
+                });
+            }
+
+            const pricingNote = document.getElementById('pricing-note');
+            if (location.pricing?.note) {
+                pricingNote.textContent = location.pricing.note;
+                pricingNote.style.display = 'block';
+            } else {
+                pricingNote.textContent = '';
+                pricingNote.style.display = 'none';
+            }
+
+            const includesList = document.getElementById('fee-includes');
+            includesList.innerHTML = '';
+            if (Array.isArray(location.pricing?.includes)) {
+                location.pricing.includes.forEach(item => {
+                    const li = document.createElement('li');
+                    li.style.marginBottom = '0.5rem';
+                    li.style.position = 'relative';
+                    li.style.paddingLeft = '1.5rem';
+                    li.innerHTML = `<i class="fas fa-check" style="color: #27ae60; position: absolute; left: 0;"></i> ${item}`;
+                    includesList.appendChild(li);
+                });
+            }
+
+            document.getElementById('pricing-headline').textContent = location.pricing?.headline || 'Ready to get started?';
+            const pricingCta = document.getElementById('pricing-cta');
+            pricingCta.textContent = location.pricing?.ctaText || 'Contact us';
+            pricingCta.href = location.pricing?.ctaUrl || 'contact.html';
 
             // Update active button
             const locationButtons = document.querySelectorAll('.location-btn');

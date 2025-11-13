@@ -22,8 +22,10 @@ class NavigationManager {
                 key: 'program',
                 hasDropdown: true,
                 dropdownItems: [
-                    { name: 'one on one offline', href: 'program.html#offline-section' },
-                    { name: 'one on one online', href: 'program.html#online-section' }
+                    { name: 'One on one Intensive Chinese', href: 'program-intensive.html' },
+                    { name: 'One on one Business Chinese', href: 'program-business.html' },
+                    { name: 'One on one Travel Chinese', href: 'program-travel.html' },
+                    { name: 'One on one HSK preparation', href: 'program.html#hsk' }
                 ]
             },
             { name: 'Location', href: 'location.html', key: 'location' },
@@ -54,7 +56,7 @@ class NavigationManager {
                 navHTML += `
                     <li class="nav-dropdown" style="position: relative;">
                         <a href="${item.href}" class="nav-link ${isActive} ${specialClass}">${item.name}</a>
-                        <div class="dropdown-menu" style="position: absolute; top: 100%; left: 0; background: white; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border-radius: 8px; opacity: 0; visibility: hidden; transition: all 0.3s ease; z-index: 1000; min-width: 150px; padding: 8px 0;">
+                        <div class="dropdown-menu" style="position: absolute; top: 100%; left: 0; background: white; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border-radius: 8px; opacity: 0; visibility: hidden; transition: all 0.3s ease; z-index: 1000; min-width: 280px; padding: 8px 0;">
                 `;
                 
                 item.dropdownItems.forEach(dropdownItem => {
