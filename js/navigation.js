@@ -25,10 +25,10 @@ class NavigationManager {
                     { name: 'One on one Intensive Chinese', href: 'program-intensive.html' },
                     { name: 'One on one Business Chinese', href: 'program-business.html' },
                     { name: 'One on one Travel Chinese', href: 'program-travel.html' },
-                    { name: 'One on one HSK preparation', href: 'program.html#hsk' }
+                    { name: 'One on one HSK preparation', href: 'program-hsk.html' }
                 ]
             },
-            { name: 'Location', href: 'location.html', key: 'location' },
+            { name: 'KunMing HQ', href: 'location.html', key: 'location' },
             { 
                 name: 'Enrollment', 
                 href: 'enrollment.html', 
