@@ -92,6 +92,27 @@ class NavigationManager {
         
         // Initialize mobile navigation
         this.initMobileNav();
+        
+        // Initialize scroll effect for navbar
+        this.initScrollEffect();
+    }
+    
+    initScrollEffect() {
+        const navbar = document.querySelector('.navbar');
+        if (navbar) {
+            let lastScroll = 0;
+            window.addEventListener('scroll', function() {
+                const currentScroll = window.pageYOffset;
+                
+                if (currentScroll > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+                
+                lastScroll = currentScroll;
+            });
+        }
     }
 
     initDropdowns() {

@@ -28,68 +28,106 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero" style="background-image: url(''); background-size: cover; background-position: center; background-repeat: no-repeat; position: relative;">
-        <div class="hero-overlay" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.4);"></div>
-        <div class="hero-container" style="position: relative; z-index: 2; display: flex; align-items: center; justify-content: space-between; min-height: 80vh;">
-            <div class="hero-content" style="flex: 1;">
-                <h1 class="hero-title" style="font-size: 3.5rem; font-weight: 700; color: white; margin-bottom: 1rem;">
-                    Learn Chinese in beautiful Yunnan, China<br>
-                    or <br>
-                    Study online around the world!
+    <section class="hero hero-fullscreen" data-parallax="true">
+        <div class="hero-background"></div>
+        <div class="hero-overlay-gradient"></div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title fade-in-up" style="animation-delay: 0.2s; text-align: left;">
+                    <span class="title-line title-line-large">Learn Chinese in <span class="title-highlight">beautiful Yunnan</span></span>
+                    <span class="title-line title-line-small">or study online around the world</span>
                 </h1>
-                <p class="hero-subtitle" style="color: white; font-size: 1.3rem; margin-bottom: 2rem; opacity: 0.9;">
+                <p class="hero-subtitle fade-in-up" style="animation-delay: 0.4s;">
                     Dive into the world's most spoken language while immersing yourself in authentic Chinese and minority cultures. Join thousands of international learners who have transformed their futures through Chinese mastery.
                 </p>
+                <div class="hero-buttons fade-in-up" style="animation-delay: 0.6s;">
+                    <a href="program.html" class="btn btn-hero-primary">
+                        <span>Explore Programs</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="apply.html" class="btn btn-hero-secondary">
+                        <span>Start Your Journey</span>
+                    </a>
+                </div>
+
             </div>
-            <div class="hero-button-right" style="margin-left: 2rem;">
-                <a href="program.html" class="btn btn-primary" style="background: linear-gradient(135deg, #ff6b6b, #ee5a24); border: none; padding: 15px 30px; font-size: 1.1rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);">explore →</a>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <div class="arrow">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </div>
     </section>
 
+    <!-- Section Transition -->
+    <div class="section-transition"></div>
+
     <!-- Featured Programs Preview -->
-    <section class="section">
+    <section class="section programs-section">
         <div class="container">
-            <h2 class="section-title">Featured Programs</h2>
-            <div class="programs-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
-                <div class="program-card">
+            <div class="section-header">
+                <span class="section-label">Our Programs</span>
+                <p class="section-description">Choose the perfect program tailored to your learning goals and lifestyle</p>
+            </div>
+            <div class="programs-grid">
+                <div class="program-card" data-aos="fade-up" data-aos-delay="0">
                     <div class="program-icon">
                         <i class="fas fa-language"></i>
                     </div>
                     <h3>One on one Intensive Chinese</h3>
                     <p>Intensive learning program designed for all language level/goals and culture demand</p>
-                    <a href="program-intensive.html" class="btn btn-primary">Learn More</a>
+                    <a href="program-intensive.html" class="btn btn-primary">
+                        <span>Learn More</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
-                <div class="program-card">
+                <div class="program-card" data-aos="fade-up" data-aos-delay="100">
                     <div class="program-icon">
                         <i class="fas fa-business-time"></i>
                     </div>
                     <h3>One on one Business Chinese</h3>
                     <p>Specialized program designed for business people and career development needs</p>
-                    <a href="program-business.html" class="btn btn-primary">Learn More</a>
+                    <a href="program-business.html" class="btn btn-primary">
+                        <span>Learn More</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
-                <div class="program-card">
+                <div class="program-card" data-aos="fade-up" data-aos-delay="200">
                     <div class="program-icon">
                         <i class="fas fa-calendar-alt"></i>
                     </div>
                     <h3>One on one Travel Chinese</h3>
                     <p>Specialized program designed for tourists' Chinese learning needs</p>
-                    <a href="program-travel.html" class="btn btn-primary">Learn More</a>
+                    <a href="program-travel.html" class="btn btn-primary">
+                        <span>Learn More</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
-                <div class="program-card">
+                <div class="program-card" data-aos="fade-up" data-aos-delay="300">
                     <div class="program-icon">
                         <i class="fas fa-certificate"></i>
                     </div>
                     <h3>One on one HSK preparation</h3>
                     <p>Comprehensive preparation for Chinese proficiency tests</p>
-                    <a href="program-hsk.html" class="btn btn-primary">Learn More</a>
+                    <a href="program-hsk.html" class="btn btn-primary">
+                        <span>Learn More</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Section Transition -->
+    <div class="section-transition section-transition-reverse"></div>
+
     <!-- Quick Stats -->
-    <section class="section" style="background-color: #f8f9fa;">
+    <section class="section" style="background-color: #E8EDF2;">
         <div class="container">
             <div class="community-stats" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem;">
                 <div class="stat-item">
@@ -113,23 +151,23 @@
                 <h3>If you are one of the following, don't hesitate, join us:</h3>
                 <ul style="margin-top: 1rem; padding-left: 0; line-height: 1.8; list-style: none;">
                     <li style="display: flex; align-items: center; gap: 0.5rem;">
-                        <span style="color: #1abc9c; font-size: 1.2rem;">&#10003;</span>
+                        <span style="color: #C85A3A; font-size: 1.2rem;">&#10003;</span>
                         <span>Want to learn or improve Chinese</span>
                     </li>
                     <li style="display: flex; align-items: center; gap: 0.5rem;">
-                        <span style="color: #1abc9c; font-size: 1.2rem;">&#10003;</span>
+                        <span style="color: #C85A3A; font-size: 1.2rem;">&#10003;</span>
                         <span>Be interested in Chinese culture or minority culture</span>
                     </li>
                     <li style="display: flex; align-items: center; gap: 0.5rem;">
-                        <span style="color: #1abc9c; font-size: 1.2rem;">&#10003;</span>
+                        <span style="color: #C85A3A; font-size: 1.2rem;">&#10003;</span>
                         <span>Want to live in China or know how real Chinese people live</span>
                     </li>
                     <li style="display: flex; align-items: center; gap: 0.5rem;">
-                        <span style="color: #1abc9c; font-size: 1.2rem;">&#10003;</span>
+                        <span style="color: #C85A3A; font-size: 1.2rem;">&#10003;</span>
                         <span>Hope or need to pass HSK</span>
                     </li>
                     <li style="display: flex; align-items: center; gap: 0.5rem;">
-                        <span style="color: #1abc9c; font-size: 1.2rem;">&#10003;</span>
+                        <span style="color: #C85A3A; font-size: 1.2rem;">&#10003;</span>
                         <span>Plan to visit China or study Chinese in Yunnan, this beautiful and amazing place</span>
                     </li>
                 </ul>
@@ -137,11 +175,14 @@
         </div>
     </section>
 
+    <!-- Section Transition -->
+    <div class="section-transition"></div>
+
     <!-- Why Choose LensTalk -->
     <section class="section">
         <div class="container">
             <h2 class="section-title">Why Choose LensTalk?</h2>
-            <div class="community-features" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+            <div class="community-features">
                 <div class="feature">
                     <div class="feature-icon">
                         <i class="fas fa-graduation-cap"></i>
@@ -182,16 +223,27 @@
         </div>
     </section>
 
+    <!-- Section Transition -->
+    <div class="section-transition section-transition-reverse"></div>
+
     <!-- Call to Action -->
-    <section class="section" style="background-color: #2c3e50; color: white;">
-        <div class="container" style="text-align: center;">
-            <h2 style="color: white; margin-bottom: 1rem;">Ready to launch your Chinese learning journey?</h2>
-            <p style="font-size: 1.2rem; margin-bottom: 2rem; opacity: 0.9;">
-                Join thousands of students who have successfully learned Chinese
-            </p>
-            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                <a href="apply.html" class="btn btn-primary">Apply Now</a>
-                <a href="program.html" class="btn btn-secondary">Get More Info</a>
+    <section class="section cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <span class="cta-label">Start Your Journey</span>
+                <h2 class="cta-title">Ready to launch your Chinese learning journey?</h2>
+                <p class="cta-description">
+                    Join thousands of students who have successfully learned Chinese and transformed their futures through language mastery.
+                </p>
+                <div class="cta-buttons">
+                    <a href="apply.html" class="btn btn-cta-primary">
+                        <span>Apply Now</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="program.html" class="btn btn-cta-secondary">
+                        <span>Explore Programs</span>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -245,8 +297,190 @@
     <script src="js/locations.js"></script>
     <script src="js/navigation.js"></script>
     <script>
+        // 预加载背景图片以提高清晰度和加载速度
+        function preloadBackgroundImage() {
+            const img = new Image();
+            img.src = 'assets/Yunnan/Yunnan1.jpg';
+            img.onload = function() {
+                // 图片加载完成后，确保所有使用该图片的元素都能正确显示
+                document.querySelectorAll('.hero-background, .section::before').forEach(el => {
+                    if (el) {
+                        el.style.opacity = '1';
+                    }
+                });
+            };
+        }
+        
+        // 立即开始预加载
+        preloadBackgroundImage();
+        
         document.addEventListener('DOMContentLoaded', function() {
             renderFooterLocations();
+            
+            // Parallax effect for hero section
+            const hero = document.querySelector('.hero[data-parallax="true"]');
+            if (hero) {
+                window.addEventListener('scroll', function() {
+                    const scrolled = window.pageYOffset;
+                    const heroBackground = hero.querySelector('.hero-background');
+                    if (heroBackground) {
+                        heroBackground.style.transform = `translateY(${scrolled * 0.5}px)`;
+                    }
+                });
+            }
+            
+            // Smooth scroll with momentum
+            let isScrolling = false;
+            let scrollTimeout;
+            
+            window.addEventListener('scroll', function() {
+                if (!isScrolling) {
+                    isScrolling = true;
+                }
+                
+                clearTimeout(scrollTimeout);
+                scrollTimeout = setTimeout(function() {
+                    isScrolling = false;
+                }, 150);
+            });
+            
+            // Enhanced parallax effect for section transitions
+            const transitions = document.querySelectorAll('.section-transition');
+            
+            const transitionObserver = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.3,
+                rootMargin: '50px'
+            });
+            
+            transitions.forEach(transition => {
+                transitionObserver.observe(transition);
+            });
+            
+            // Enhanced fade in animation on scroll with staggered delays
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -100px 0px'
+            };
+            
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, observerOptions);
+            
+            // Animate section headers
+            document.querySelectorAll('.section-header').forEach((el, index) => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(30px)';
+                el.style.transition = `opacity 0.8s ease ${index * 0.1}s, transform 0.8s ease ${index * 0.1}s`;
+                observer.observe(el);
+            });
+            
+            // Animate program cards with staggered delays
+            document.querySelectorAll('.program-card').forEach((el, index) => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(40px)';
+                el.style.transition = `opacity 0.8s ease ${index * 0.15}s, transform 0.8s ease ${index * 0.15}s`;
+                observer.observe(el);
+            });
+            
+            // Animate stat items
+            document.querySelectorAll('.stat-item').forEach((el, index) => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(30px) scale(0.95)';
+                el.style.transition = `opacity 0.8s ease ${index * 0.1}s, transform 0.8s ease ${index * 0.1}s`;
+                observer.observe(el);
+            });
+            
+            // Animate features
+            document.querySelectorAll('.feature').forEach((el, index) => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(30px)';
+                el.style.transition = `opacity 0.8s ease ${index * 0.1}s, transform 0.8s ease ${index * 0.1}s`;
+                observer.observe(el);
+            });
+            
+            // Animate sections themselves with parallax effect
+            const sectionObserver = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        
+                        // Special handling for CTA section
+                        if (entry.target.classList.contains('cta-section')) {
+                            const ctaContent = entry.target.querySelector('.cta-content');
+                            if (ctaContent) {
+                                setTimeout(() => {
+                                    ctaContent.style.opacity = '1';
+                                    ctaContent.style.transform = 'translateY(0)';
+                                }, 200);
+                            }
+                        }
+                    }
+                });
+            }, {
+                threshold: 0.2,
+                rootMargin: '0px'
+            });
+            
+            document.querySelectorAll('.section').forEach(section => {
+                sectionObserver.observe(section);
+            });
+            
+            // Parallax effect for section backgrounds
+            let lastScrollY = 0;
+            let parallaxTicking = false;
+            
+            function updateParallax() {
+                const scrollY = window.pageYOffset;
+                const sections = document.querySelectorAll('.section:not(.hero-fullscreen)');
+                
+                sections.forEach((section, index) => {
+                    const rect = section.getBoundingClientRect();
+                    const sectionTop = rect.top + scrollY;
+                    const sectionHeight = rect.height;
+                    const windowHeight = window.innerHeight;
+                    
+                    // Only apply parallax when section is in viewport
+                    if (rect.top < windowHeight && rect.bottom > 0) {
+                        // Calculate parallax offset based on scroll position
+                        const scrollProgress = (scrollY - sectionTop + windowHeight) / (windowHeight + sectionHeight);
+                        const parallaxOffset = (scrollProgress - 0.5) * 80; // Parallax movement for background
+                        
+                        // Apply parallax to background image using CSS custom property
+                        section.style.setProperty('--bg-offset', `${parallaxOffset * 0.4}px`);
+                    } else {
+                        // Reset when out of viewport
+                        section.style.setProperty('--bg-offset', '0px');
+                    }
+                });
+                
+                lastScrollY = scrollY;
+                parallaxTicking = false;
+            }
+            
+            // Only enable parallax on desktop (better performance)
+            if (window.innerWidth > 768) {
+                window.addEventListener('scroll', function() {
+                    if (!parallaxTicking) {
+                        window.requestAnimationFrame(updateParallax);
+                        parallaxTicking = true;
+                    }
+                });
+                
+                // Initial call
+                updateParallax();
+            }
         });
     </script>
 </body>
