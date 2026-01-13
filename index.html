@@ -300,7 +300,7 @@
         // 预加载背景图片以提高清晰度和加载速度
         function preloadBackgroundImage() {
             const img = new Image();
-            img.src = '/assets/Yunnan/Yunnan1.jpg';
+            img.src = '/Lenstalk/assets/Yunnan/Yunnan1.jpg';
             img.onload = function() {
                 // 图片加载完成后，确保所有使用该图片的元素都能正确显示
                 document.querySelectorAll('.hero-background, .section::before').forEach(el => {
