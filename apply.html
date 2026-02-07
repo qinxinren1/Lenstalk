@@ -44,7 +44,7 @@
                 <div style="text-align: center; margin-bottom: 3rem;">
                     <h2 style="margin-bottom: 1rem;">Application Form</h2>
                     <p style="color: #666; font-size: 1.1rem;">
-                        Fill out the form below to apply for your chosen program. Our team will review your application and contact you within 3-5 business days.
+                        Fill out the form below to apply for your chosen program. Our team will review your application and contact you within 1-2 business days.
                     </p>
                 </div>
                 
@@ -106,10 +106,8 @@
                                 <option value="">Select a program</option>
                                 <option value="intensive">Intensive Chinese</option>
                                 <option value="business">Business Chinese</option>
-                                <option value="summer">Summer Intensive</option>
+                                <option value="travel">Travel Chinese</option>
                                 <option value="hsk">HSK Preparation</option>
-                                <option value="group">Group Programs</option>
-                                <option value="online">Online Learning</option>
                             </select>
                         </div>
                         <div class="form-group">
@@ -131,28 +129,33 @@
                             <input type="month" id="startDate" name="startDate" required>
                         </div>
                         <div class="form-group">
-                            <label for="duration">Program Duration</label>
-                            <select id="duration" name="duration">
-                                <option value="">Select duration</option>
-                                <option value="1-month">1 Month</option>
-                                <option value="3-months">3 Months</option>
-                                <option value="6-months">6 Months</option>
-                                <option value="1-year">1 Year</option>
-                                <option value="2-years">2 Years</option>
+                            <label for="campus">Preferred Location *</label>
+                            <select id="campus" name="campus" required>
+                                <option value="">Select location</option>
+                                <option value="kunming">Kunming HQ</option>
+                                <option value="dali">Dali</option>
+                                <option value="shaxi">Shaxi</option>
+                                <option value="fuxianhu">Fuxian Lake</option>
+                                <option value="jingmai">Jingmai Tea Mountain</option>
+                                <option value="tengchong">Tengchong</option>
+                                <option value="online">Online Learning</option>
                             </select>
                         </div>
                     </div>
                     
-                    <div class="form-group" style="margin-bottom: 1.5rem;">
-                        <label for="campus">Preferred Campus</label>
-                        <select id="campus" name="campus">
-                            <option value="">Select campus</option>
-                            <option value="beijing">Beijing Campus</option>
-                            <option value="shanghai">Shanghai Campus</option>
-                            <option value="chengdu">Chengdu Campus</option>
-                            <option value="online">Online Learning</option>
-                            <option value="flexible">No preference</option>
-                        </select>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
+                        <div class="form-group">
+                            <label for="hoursPerDay">Hours/Day</label>
+                            <select id="hoursPerDay" name="hoursPerDay">
+                                <option value="">Select hours/day</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="duration">Program Duration</label>
+                            <select id="duration" name="duration">
+                                <option value="">Select duration</option>
+                            </select>
+                        </div>
                     </div>
                     
                     <div class="form-group" style="margin-bottom: 1.5rem;">
@@ -171,25 +174,17 @@
                     </div>
                     
                     <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 8px; margin-bottom: 1.5rem;">
-                        <h4 style="margin-bottom: 1rem; color: #2c3e50;">Additional Information</h4>
-                        <div class="form-group">
-                            <label for="accommodation">Accommodation Preference</label>
-                            <select id="accommodation" name="accommodation">
-                                <option value="">Select preference</option>
-                                <option value="dormitory">On-campus dormitory</option>
-                                <option value="apartment">Off-campus apartment</option>
-                                <option value="homestay">Homestay with Chinese family</option>
-                                <option value="arrange-myself">I will arrange my own accommodation</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="visa">Do you need visa assistance?</label>
-                            <select id="visa" name="visa">
-                                <option value="">Select option</option>
-                                <option value="yes">Yes, I need full visa assistance</option>
-                                <option value="partial">Yes, I need partial assistance</option>
-                                <option value="no">No, I will handle visa myself</option>
-                            </select>
+                        <h4 style="margin-bottom: 1rem; color: #2c3e50;">The Price of Your Chinese Program:</h4>
+                        <div id="price-calculation" style="text-align: center; padding: 1rem;">
+                            <p style="font-size: 1.2rem; color: #666; margin: 0;">
+                                Please select location, hours/day, and duration to see the price.
+                            </p>
+                            <div id="calculated-price" style="display: none; margin-top: 1rem;">
+                                <p style="font-size: 1.8rem; font-weight: 700; color: #7A99C7; margin: 0.5rem 0;">
+                                    Total: $<span id="total-price">0</span> USD
+                                </p>
+                                <p style="font-size: 0.9rem; color: #888; margin-top: 0.5rem;" id="price-breakdown"></p>
+                            </div>
                         </div>
                     </div>
                     
@@ -221,7 +216,7 @@
                     </div>
                     <div>
                         <h4>Apply Early</h4>
-                        <p>Submit your application at least 2-3 months before your desired start date to allow time for visa processing</p>
+                        <p>Submit your application at least 1 month before your desired start date to allow time for visa processing</p>
                     </div>
                 </div>
                 <div class="feature">
@@ -305,6 +300,142 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             renderFooterLocations();
+            
+            // Pricing data
+            const pricingData = {
+                offline: {
+                    kunming: { 4: 688, 5: 785, 6: 880 },
+                    dali: { 4: 1300, 5: 1490, 6: 1630 },
+                    shaxi: { 4: 1400, 5: 1590, 6: 1730 },
+                    fuxianhu: { 4: 1300, 5: 1490, 6: 1630 },
+                    jingmai: { 4: 1740, 5: 1920, 6: 2050 },
+                    tengchong: { 4: null, 5: null, 6: null } // To be determined
+                },
+                online: {
+                    10: 220,
+                    15: 330,
+                    20: 440,
+                    25: 550,
+                    30: 660,
+                    35: 770,
+                    40: 880,
+                    45: 990,
+                    50: 1100
+                }
+            };
+            
+            const campusSelect = document.getElementById('campus');
+            const hoursPerDaySelect = document.getElementById('hoursPerDay');
+            const durationSelect = document.getElementById('duration');
+            
+            // Update options based on location selection
+            function updateOptions() {
+                const location = campusSelect.value;
+                const hoursSelect = hoursPerDaySelect;
+                const durationSelectEl = durationSelect;
+                
+                // Clear existing options
+                hoursSelect.innerHTML = '<option value="">Select hours/day</option>';
+                durationSelectEl.innerHTML = '<option value="">Select duration</option>';
+                
+                if (!location) {
+                    hoursSelect.disabled = true;
+                    durationSelectEl.disabled = true;
+                    updatePrice();
+                    return;
+                }
+                
+                if (location === 'online') {
+                    // Online Learning: Hours/Day disabled, Duration shows hours
+                    hoursSelect.disabled = true;
+                    hoursSelect.innerHTML = '<option value="">Not applicable for online learning</option>';
+                    
+                    durationSelectEl.disabled = false;
+                    const onlineHours = [10, 15, 20, 25, 30, 35, 40, 45, 50];
+                    onlineHours.forEach(hours => {
+                        const option = document.createElement('option');
+                        option.value = hours;
+                        option.textContent = hours + ' hours';
+                        durationSelectEl.appendChild(option);
+                    });
+                } else {
+                    // Offline locations: Hours/Day shows 4, 5, 6 hours
+                    hoursSelect.disabled = false;
+                    [4, 5, 6].forEach(hours => {
+                        const option = document.createElement('option');
+                        option.value = hours;
+                        option.textContent = hours + ' hours';
+                        hoursSelect.appendChild(option);
+                    });
+                    
+                    durationSelectEl.disabled = false;
+                    [1, 2, 3, 4].forEach(weeks => {
+                        const option = document.createElement('option');
+                        option.value = weeks;
+                        option.textContent = weeks + (weeks === 1 ? ' week' : ' weeks');
+                        durationSelectEl.appendChild(option);
+                    });
+                }
+                
+                updatePrice();
+            }
+            
+            // Calculate and display price
+            function updatePrice() {
+                const location = campusSelect.value;
+                const hoursPerDay = parseInt(hoursPerDaySelect.value);
+                const duration = durationSelect.value;
+                const priceDiv = document.getElementById('calculated-price');
+                const totalPriceSpan = document.getElementById('total-price');
+                const breakdownP = document.getElementById('price-breakdown');
+                
+                if (!location || !duration) {
+                    priceDiv.style.display = 'none';
+                    return;
+                }
+                
+                let totalPrice = 0;
+                let breakdown = '';
+                
+                if (location === 'online') {
+                    // Online: duration is total hours
+                    const totalHours = parseInt(duration);
+                    if (pricingData.online[totalHours]) {
+                        totalPrice = pricingData.online[totalHours];
+                        breakdown = `${totalHours} hours × $${totalPrice / totalHours} = $${totalPrice}`;
+                    }
+                } else {
+                    // Offline: duration is weeks, hoursPerDay is hours per day
+                    if (hoursPerDay && duration) {
+                        const weeks = parseInt(duration);
+                        const pricePerWeek = pricingData.offline[location] && pricingData.offline[location][hoursPerDay];
+                        
+                        if (pricePerWeek === null) {
+                            totalPrice = 0;
+                            breakdown = 'Price to be determined. Please contact us.';
+                        } else if (pricePerWeek) {
+                            totalPrice = pricePerWeek * weeks;
+                            breakdown = `${weeks} ${weeks === 1 ? 'week' : 'weeks'} × $${pricePerWeek}/week = $${totalPrice}`;
+                        }
+                    }
+                }
+                
+                if (totalPrice > 0 || breakdown.includes('determined')) {
+                    totalPriceSpan.textContent = totalPrice > 0 ? totalPrice.toLocaleString() : 'TBD';
+                    breakdownP.textContent = breakdown;
+                    priceDiv.style.display = 'block';
+                } else {
+                    priceDiv.style.display = 'none';
+                }
+            }
+            
+            // Event listeners
+            campusSelect.addEventListener('change', updateOptions);
+            hoursPerDaySelect.addEventListener('change', updatePrice);
+            durationSelect.addEventListener('change', updatePrice);
+            
+            // Initialize
+            updateOptions();
         });
     </script>
     <script src="js/navigation.js"></script>

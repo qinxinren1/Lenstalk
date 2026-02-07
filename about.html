@@ -8,6 +8,43 @@
     <link rel="stylesheet" href="css/responsive.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @media (max-width: 1024px) {
+            .about-values[style*="grid-template-columns: repeat(4, 1fr)"] {
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+        }
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem !important;
+            }
+            .hero p {
+                font-size: 1.1rem !important;
+            }
+            .section-title {
+                font-size: 2rem !important;
+            }
+            .about-values {
+                grid-template-columns: 1fr !important;
+                gap: 1.5rem !important;
+            }
+            .value {
+                padding: 2rem 1.5rem !important;
+            }
+            .program-card {
+                min-width: 100% !important;
+            }
+            section[style*="grid-template-columns: repeat(auto-fit, minmax(380px, 1fr))"] {
+                grid-template-columns: 1fr !important;
+            }
+            section[style*="grid-template-columns: repeat(auto-fit, minmax(400px, 1fr))"] {
+                grid-template-columns: 1fr !important;
+            }
+            .cta-section .container > div {
+                padding: 2.5rem 1.5rem !important;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
@@ -28,212 +65,405 @@
     </nav>
 
     <!-- Page Header -->
-    <section class="hero" style="padding: 120px 0 60px;">
+    <section class="hero" style="padding: 140px 0 80px; position: relative; overflow: hidden;">
         <div class="container">
-            <div style="text-align: center; color: white;">
-                <h1 style="font-size: 3rem; margin-bottom: 1rem;">About LensTalk</h1>
-                <p style="font-size: 1.2rem; opacity: 0.9;">Your gateway to Chinese excellence</p>
+            <div style="text-align: center; color: white; position: relative; z-index: 2;">
+                <h1 style="font-size: 3.5rem; margin-bottom: 1.5rem; font-weight: 700; text-shadow: 2px 2px 8px rgba(0,0,0,0.3);">About LensTalk</h1>
+                <p style="font-size: 1.3rem; opacity: 0.95; font-weight: 300; letter-spacing: 0.5px;">Your gateway to Chinese excellence</p>
             </div>
         </div>
     </section>
+
+    <!-- Section Transition -->
+    <div class="section-transition"></div>
 
     <!-- About Content -->
-    <section class="section">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <h3>Your Gateway to Chinese Excellence</h3>
-                    <p>
-                        Founded in 2008, LensTalk has been at the forefront of Chinese language education, 
-                        helping thousands of international students master Chinese and achieve their academic 
-                        and professional goals. Our innovative teaching methods, experienced instructors, 
-                        and immersive cultural programs set us apart.
+    <section class="section" style="padding: 80px 0;">
+        <div class="container" style="max-width: 1200px;">
+            <div style="text-align: center; margin-bottom: 4rem;">
+                <span class="section-label" style="display: inline-block; color: #7A99C7; font-weight: 600; letter-spacing: 2px; margin-bottom: 1rem;">WHO WE ARE</span>
+                <h2 class="section-title" style="font-size: 2.5rem; margin-bottom: 1rem;">Your Gateway to Chinese Excellence</h2>
+            </div>
+            
+            <div style="max-width: 900px; margin: 0 auto 4rem;">
+                <div style="background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%); padding: 3rem; border-radius: 16px; box-shadow: 0 10px 40px rgba(0,0,0,0.08); margin-bottom: 3rem;">
+                    <p style="font-size: 1.15rem; line-height: 1.9; color: #444; margin-bottom: 1.5rem;">
+                        LensTalk Education is composed of a team of professional, experienced, and passionate tutors, who have helped more than 2000 international students all over the world to master Chinese and achieve their language goals. Our innovative teaching methods, remarkable instructors, and immersive cultural programs set us apart.
                     </p>
-                    <p>
-                        We believe that language learning goes beyond textbooks. Our comprehensive approach 
-                        combines rigorous academic training with real-world cultural immersion, ensuring 
-                        our students not only learn Chinese but truly understand Chinese culture and society.
+                    <p style="font-size: 1.15rem; line-height: 1.9; color: #444; margin-bottom: 1.5rem;">
+                        We believe that language learning goes beyond textbooks, we also believe that everyone is unique, the student experience and the quality of coaching are far more important than the number of students. That's why we are dedicated in One on One learning mode, and provide customized and personalized guidance, ensuring our students not only learn <strong style="color: #7A99C7;">how to use Chinese and achieve their language goals, but also truly understand Chinese life and culture.</strong>
                     </p>
-                    <div class="about-values">
-                        <div class="value">
-                            <h4><i class="fas fa-graduation-cap"></i> Excellence</h4>
-                            <p>Highest standards in education and student support</p>
-                        </div>
-                        <div class="value">
-                            <h4><i class="fas fa-users"></i> Community</h4>
-                            <p>Building lasting connections between cultures</p>
-                        </div>
-                        <div class="value">
-                            <h4><i class="fas fa-lightbulb"></i> Innovation</h4>
-                            <p>Cutting-edge teaching methods and technology</p>
-                        </div>
-                        <div class="value">
-                            <h4><i class="fas fa-heart"></i> Support</h4>
-                            <p>Comprehensive support for every student's journey</p>
-                        </div>
-                    </div>
+                    <p style="font-size: 1.2rem; line-height: 1.9; color: #2c3e50; font-weight: 500; text-align: center; margin-top: 2rem; padding-top: 2rem; border-top: 2px solid #e1e5e9;">
+                        <span style="color: #7A99C7; font-weight: 600;">Lens Talk, let's talk!</span> We sincerely invite you to join us, experience firsthand the beauty of the Chinese language and culture, and make every day count.
+                    </p>
                 </div>
-                <div class="about-placeholder">
-                    <div style="font-size: 8rem; color: #0D7377; margin-bottom: 1rem;">
-                        <i class="fas fa-university"></i>
+            </div>
+
+            <!-- Values Grid -->
+            <div class="about-values" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; max-width: 1200px; margin: 0 auto;">
+                <div class="value" style="text-align: center; padding: 2.5rem 2rem; background: white; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); transition: transform 0.3s ease, box-shadow 0.3s ease; border-top: 4px solid #7A99C7;">
+                    <div style="font-size: 3rem; color: #7A99C7; margin-bottom: 1rem;">
+                        <i class="fas fa-graduation-cap"></i>
                     </div>
-                    <h4>15 Years of Excellence</h4>
-                    <p>Trusted by students worldwide</p>
+                    <h4 style="font-size: 1.3rem; margin-bottom: 0.8rem; color: #2c3e50; font-weight: 600;">Excellence</h4>
+                    <p style="color: #666; font-size: 1rem; line-height: 1.6; margin: 0;">Highest standards in education and student support</p>
+                </div>
+                <div class="value" style="text-align: center; padding: 2.5rem 2rem; background: white; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); transition: transform 0.3s ease, box-shadow 0.3s ease; border-top: 4px solid #7A99C7;">
+                    <div style="font-size: 3rem; color: #7A99C7; margin-bottom: 1rem;">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h4 style="font-size: 1.3rem; margin-bottom: 0.8rem; color: #2c3e50; font-weight: 600;">Community</h4>
+                    <p style="color: #666; font-size: 1rem; line-height: 1.6; margin: 0;">Building lasting connections between cultures</p>
+                </div>
+                <div class="value" style="text-align: center; padding: 2.5rem 2rem; background: white; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); transition: transform 0.3s ease, box-shadow 0.3s ease; border-top: 4px solid #7A99C7;">
+                    <div style="font-size: 3rem; color: #7A99C7; margin-bottom: 1rem;">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h4 style="font-size: 1.3rem; margin-bottom: 0.8rem; color: #2c3e50; font-weight: 600;">Innovation</h4>
+                    <p style="color: #666; font-size: 1rem; line-height: 1.6; margin: 0;">Personalized teaching methods and technology</p>
+                </div>
+                <div class="value" style="text-align: center; padding: 2.5rem 2rem; background: white; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); transition: transform 0.3s ease, box-shadow 0.3s ease; border-top: 4px solid #7A99C7;">
+                    <div style="font-size: 3rem; color: #7A99C7; margin-bottom: 1rem;">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h4 style="font-size: 1.3rem; margin-bottom: 0.8rem; color: #2c3e50; font-weight: 600;">Support</h4>
+                    <p style="color: #666; font-size: 1rem; line-height: 1.6; margin: 0;">Comprehensive support for every student's journey</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Our Story -->
-    <section class="section" style="background-color: #f8f9fa;">
-        <div class="container">
-            <h2 class="section-title">Our Story</h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
-                <div class="program-card">
-                    <h3><i class="fas fa-seedling"></i> 2008 - The Beginning</h3>
-                    <p>LensTalk was founded by a group of passionate educators who believed that learning Chinese should be accessible, engaging, and culturally immersive. Starting with just 50 students in Beijing, we focused on creating a supportive learning environment.</p>
-                </div>
-                <div class="program-card">
-                    <h3><i class="fas fa-expand-arrows-alt"></i> 2012 - Expansion</h3>
-                    <p>We expanded to Shanghai and launched our first online programs, making Chinese education accessible to students worldwide. Our innovative teaching methods gained recognition from international educational institutions.</p>
-                </div>
-                <div class="program-card">
-                    <h3><i class="fas fa-award"></i> 2018 - Recognition</h3>
-                    <p>LensTalk received the "Best Chinese Language School" award from the International Education Association. We launched our business Chinese program and established partnerships with major corporations.</p>
-                </div>
-                <div class="program-card">
-                    <h3><i class="fas fa-rocket"></i> 2024 - Innovation</h3>
-                    <p>Today, we serve over 2000 students annually across three campuses and online platforms. We continue to innovate with cutting-edge technology and personalized learning approaches.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- Section Transition -->
+    <div class="section-transition section-transition-reverse"></div>
 
     <!-- Our Team -->
-    <section class="section">
-        <div class="container">
-            <h2 class="section-title">Meet Our Team</h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
-                <div class="program-card" style="text-align: center;">
-                    <div style="width: 100px; height: 100px; background: #0D7377; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; color: white; font-size: 2rem;">
-                        <i class="fas fa-user-tie"></i>
+    <section class="section" style="background-color: #f8f9fa; padding: 80px 0;">
+        <div class="container" style="max-width: 1400px;">
+            <div style="text-align: center; margin-bottom: 4rem;">
+                <span class="section-label" style="display: inline-block; color: #7A99C7; font-weight: 600; letter-spacing: 2px; margin-bottom: 1rem;">OUR TEAM</span>
+                <h2 class="section-title" style="font-size: 2.5rem; margin-bottom: 0.5rem;">Meet Our Teachers</h2>
+                <p style="font-size: 1.1rem; color: #666; max-width: 600px; margin: 0 auto;">Passionate educators dedicated to your Chinese learning journey</p>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 2.5rem;">
+                <!-- Moonie Ma -->
+                <div class="program-card teacher-card" style="padding: 0; background: white; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.12); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); height: 100%; display: flex; flex-direction: column; overflow: hidden; position: relative;">
+                    <!-- Header with gradient -->
+                    <div style="background: linear-gradient(135deg, #7A99C7 0%, #9BB5D9 100%); padding: 2.5rem 2rem 2rem; position: relative;">
+                        <div style="position: absolute; top: 0; right: 0; width: 150px; height: 150px; background: rgba(255,255,255,0.1); border-radius: 50%; transform: translate(30%, -30%);"></div>
+                        <div style="display: flex; align-items: center; gap: 1.5rem; position: relative; z-index: 1;">
+                            <div style="width: 100px; height: 100px; background: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #7A99C7; font-size: 3rem; flex-shrink: 0; box-shadow: 0 8px 25px rgba(0,0,0,0.15); border: 4px solid rgba(255,255,255,0.3);">
+                                <i class="fas fa-user-tie"></i>
+                            </div>
+                            <div style="flex: 1;">
+                                <h3 style="margin: 0 0 0.5rem 0; color: white; font-size: 1.6rem; font-weight: 700; text-shadow: 0 2px 10px rgba(0,0,0,0.2);">Moonie Ma</h3>
+                                <p style="color: rgba(255,255,255,0.95); font-weight: 500; margin: 0; font-size: 1rem; letter-spacing: 0.5px;">Special Consultant</p>
+                            </div>
+                        </div>
                     </div>
-                    <h3>Dr. Li Wei</h3>
-                    <p style="color: #0D7377; font-weight: 600;">Founder & Academic Director</p>
-                    <p>PhD in Chinese Linguistics from Peking University. 20+ years of experience in Chinese language education.</p>
+                    
+                    <!-- Content -->
+                    <div style="padding: 2rem; flex: 1; display: flex; flex-direction: column;">
+                        <!-- Certificates -->
+                        <div style="margin-bottom: 1.5rem; padding: 1.25rem; background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%); border-radius: 12px; border-left: 4px solid #7A99C7;">
+                            <p style="font-weight: 700; color: #2c3e50; margin-bottom: 1rem; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; display: flex; align-items: center; gap: 0.5rem;">
+                                <i class="fas fa-award" style="color: #7A99C7;"></i> Certifications
+                            </p>
+                            <ul style="list-style: none; padding: 0; margin: 0; line-height: 1.9;">
+                                <li style="color: #555; font-size: 0.9rem; margin-bottom: 0.6rem; display: flex; align-items: start; gap: 0.6rem;">
+                                    <i class="fas fa-check-circle" style="color: #7A99C7; margin-top: 0.2rem; flex-shrink: 0;"></i>
+                                    <span>Certificate for Teachers of Chinese to Speakers of Other Languages (CTCSOL)</span>
+                                </li>
+                                <li style="color: #555; font-size: 0.9rem; display: flex; align-items: start; gap: 0.6rem;">
+                                    <i class="fas fa-check-circle" style="color: #7A99C7; margin-top: 0.2rem; flex-shrink: 0;"></i>
+                                    <span>National Mandarin Professional Certificate</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Bio -->
+                        <div style="flex: 1; display: flex; flex-direction: column; gap: 1rem;">
+                            <p style="color: #555; line-height: 1.85; margin: 0; font-size: 0.95rem;">
+                                My passion for Chinese teaching began 16 years ago when I received the prestigious Chevening Scholarship and embarked on my academic journey in UK. During my years of studying and working in UK, I participated in many language exchange programs, the exchanges and collisions between different cultures sparked brilliant sparks, I fell in love in language teaching and cross-cultural communication.
+                            </p>
+                            <p style="color: #555; line-height: 1.85; margin: 0; font-size: 0.95rem;">
+                                Teaching Chinese as a foreign language is both my passion and profession. I believe the essence of language resides in communication. My classroom extends beyond language instruction to become a dynamic bridge connecting Chinese and Western cultures. Looking forward to meet you at Lenstalk and accompany you on your Chinese learning journey.
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                <div class="program-card" style="text-align: center;">
-                    <div style="width: 100px; height: 100px; background: #0D7377; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; color: white; font-size: 2rem;">
-                        <i class="fas fa-user-graduate"></i>
+
+                <!-- Linda Li -->
+                <div class="program-card teacher-card" style="padding: 0; background: white; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.12); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); height: 100%; display: flex; flex-direction: column; overflow: hidden; position: relative;">
+                    <div style="background: linear-gradient(135deg, #7A99C7 0%, #9BB5D9 100%); padding: 2.5rem 2rem 2rem; position: relative;">
+                        <div style="position: absolute; top: 0; right: 0; width: 150px; height: 150px; background: rgba(255,255,255,0.1); border-radius: 50%; transform: translate(30%, -30%);"></div>
+                        <div style="display: flex; align-items: center; gap: 1.5rem; position: relative; z-index: 1;">
+                            <div style="width: 100px; height: 100px; background: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #7A99C7; font-size: 3rem; flex-shrink: 0; box-shadow: 0 8px 25px rgba(0,0,0,0.15); border: 4px solid rgba(255,255,255,0.3);">
+                                <i class="fas fa-chalkboard-teacher"></i>
+                            </div>
+                            <div style="flex: 1;">
+                                <h3 style="margin: 0 0 0.5rem 0; color: white; font-size: 1.6rem; font-weight: 700; text-shadow: 0 2px 10px rgba(0,0,0,0.2);">Linda Li</h3>
+                                <p style="color: rgba(255,255,255,0.95); font-weight: 500; margin: 0; font-size: 1rem; letter-spacing: 0.5px;">Tutor</p>
+                            </div>
+                        </div>
                     </div>
-                    <h3>Sarah Chen</h3>
-                    <p style="color: #0D7377; font-weight: 600;">Head of International Programs</p>
-                    <p>Master's in International Education from Columbia University. Fluent in 5 languages and passionate about cultural exchange.</p>
+                    <div style="padding: 2rem; flex: 1; display: flex; flex-direction: column;">
+                        <div style="margin-bottom: 1.5rem; padding: 1.25rem; background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%); border-radius: 12px; border-left: 4px solid #7A99C7;">
+                            <p style="font-weight: 700; color: #2c3e50; margin-bottom: 1rem; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; display: flex; align-items: center; gap: 0.5rem;">
+                                <i class="fas fa-award" style="color: #7A99C7;"></i> Certifications
+                            </p>
+                            <ul style="list-style: none; padding: 0; margin: 0; line-height: 1.9;">
+                                <li style="color: #555; font-size: 0.9rem; margin-bottom: 0.6rem; display: flex; align-items: start; gap: 0.6rem;">
+                                    <i class="fas fa-check-circle" style="color: #7A99C7; margin-top: 0.2rem; flex-shrink: 0;"></i>
+                                    <span>National Teacher Qualification Certificate and Montessori Teacher Qualification Certificate</span>
+                                </li>
+                                <li style="color: #555; font-size: 0.9rem; display: flex; align-items: start; gap: 0.6rem;">
+                                    <i class="fas fa-check-circle" style="color: #7A99C7; margin-top: 0.2rem; flex-shrink: 0;"></i>
+                                    <span>National Mandarin Professional Certificate</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div style="flex: 1; display: flex; flex-direction: column; gap: 1rem;">
+                            <p style="color: #555; line-height: 1.85; margin: 0; font-size: 0.95rem;">
+                                In my early years, I was commissioned by the Overseas Chinese Affairs Office of Yunnan Provincial Government, representing Yunnan Province in carrying out voluntary teaching in Mandalay, Myanmar. Then I went to Germany and Italy for further studies, which has further deepened my professional understanding of language teaching and cross-culture communication.
+                            </p>
+                            <p style="color: #555; line-height: 1.85; margin: 0; font-size: 0.95rem;">
+                                With 18 years of professional experience in language education and sojourn experience in almost 20 countries, I have developed a great passion for Chinese teaching and cultural exchange deeply within myself. Also I have a very outgoing personality and I really enjoy making friends and learning from each other. Looking forward to exchanging insights and study with you at Lenstalk.
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                <div class="program-card" style="text-align: center;">
-                    <div style="width: 100px; height: 100px; background: #0D7377; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; color: white; font-size: 2rem;">
-                        <i class="fas fa-chalkboard-teacher"></i>
+
+                <!-- Hazel Huang -->
+                <div class="program-card teacher-card" style="padding: 0; background: white; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.12); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); height: 100%; display: flex; flex-direction: column; overflow: hidden; position: relative;">
+                    <div style="background: linear-gradient(135deg, #7A99C7 0%, #9BB5D9 100%); padding: 2.5rem 2rem 2rem; position: relative;">
+                        <div style="position: absolute; top: 0; right: 0; width: 150px; height: 150px; background: rgba(255,255,255,0.1); border-radius: 50%; transform: translate(30%, -30%);"></div>
+                        <div style="display: flex; align-items: center; gap: 1.5rem; position: relative; z-index: 1;">
+                            <div style="width: 100px; height: 100px; background: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #7A99C7; font-size: 3rem; flex-shrink: 0; box-shadow: 0 8px 25px rgba(0,0,0,0.15); border: 4px solid rgba(255,255,255,0.3);">
+                                <i class="fas fa-chalkboard-teacher"></i>
+                            </div>
+                            <div style="flex: 1;">
+                                <h3 style="margin: 0 0 0.5rem 0; color: white; font-size: 1.6rem; font-weight: 700; text-shadow: 0 2px 10px rgba(0,0,0,0.2);">Hazel Huang</h3>
+                                <p style="color: rgba(255,255,255,0.95); font-weight: 500; margin: 0; font-size: 1rem; letter-spacing: 0.5px;">Tutor</p>
+                            </div>
+                        </div>
                     </div>
-                    <h3>Prof. Zhang Ming</h3>
-                    <p style="color: #0D7377; font-weight: 600;">Chief Instructor</p>
-                    <p>Former professor at Beijing Language and Culture University. Specializes in HSK preparation and business Chinese.</p>
+                    <div style="padding: 2rem; flex: 1; display: flex; flex-direction: column;">
+                        <div style="margin-bottom: 1.5rem; padding: 1.25rem; background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%); border-radius: 12px; border-left: 4px solid #7A99C7;">
+                            <p style="font-weight: 700; color: #2c3e50; margin-bottom: 1rem; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; display: flex; align-items: center; gap: 0.5rem;">
+                                <i class="fas fa-award" style="color: #7A99C7;"></i> Certifications
+                            </p>
+                            <ul style="list-style: none; padding: 0; margin: 0; line-height: 1.9;">
+                                <li style="color: #555; font-size: 0.9rem; margin-bottom: 0.6rem; display: flex; align-items: start; gap: 0.6rem;">
+                                    <i class="fas fa-check-circle" style="color: #7A99C7; margin-top: 0.2rem; flex-shrink: 0;"></i>
+                                    <span>Certificate for Teachers of Chinese to Speakers of Other Languages (CTCSOL)</span>
+                                </li>
+                                <li style="color: #555; font-size: 0.9rem; display: flex; align-items: start; gap: 0.6rem;">
+                                    <i class="fas fa-check-circle" style="color: #7A99C7; margin-top: 0.2rem; flex-shrink: 0;"></i>
+                                    <span>National Mandarin Professional Certificate</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div style="flex: 1; display: flex; flex-direction: column; gap: 1rem;">
+                            <p style="color: #555; line-height: 1.85; margin: 0; font-size: 0.95rem;">
+                                My undergraduate and master's degrees are both in International Chinese Education, during more than 7 years of dedicated study in Chinese teaching, I have built my passion for it and have been constantly learning and improving. Then I worked as a Chinese teacher in many places at China and abroad for many years, creating my unique and practical methods and help so many students overcome their fear and reach their language goals, including HSK/Medicine Chinese/Business Chinese (BCT)/Conversational Chinese, etc.
+                            </p>
+                            <p style="color: #555; line-height: 1.85; margin: 0; font-size: 0.95rem;">
+                                Traveling to more than 20 countries has also been very helpful for my cross-cultural communication and the development of my international perspective. I like music and art, I'm a bit of a perfectionist but also very patient. My classes will never disappoint my students, look forward to seeing you and study with you at Lenstalk.
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                <div class="program-card" style="text-align: center;">
-                    <div style="width: 100px; height: 100px; background: #0D7377; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; color: white; font-size: 2rem;">
-                        <i class="fas fa-users-cog"></i>
+
+                <!-- Estelle Zhang -->
+                <div class="program-card teacher-card" style="padding: 0; background: white; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.12); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); height: 100%; display: flex; flex-direction: column; overflow: hidden; position: relative;">
+                    <div style="background: linear-gradient(135deg, #7A99C7 0%, #9BB5D9 100%); padding: 2.5rem 2rem 2rem; position: relative;">
+                        <div style="position: absolute; top: 0; right: 0; width: 150px; height: 150px; background: rgba(255,255,255,0.1); border-radius: 50%; transform: translate(30%, -30%);"></div>
+                        <div style="display: flex; align-items: center; gap: 1.5rem; position: relative; z-index: 1;">
+                            <div style="width: 100px; height: 100px; background: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #7A99C7; font-size: 3rem; flex-shrink: 0; box-shadow: 0 8px 25px rgba(0,0,0,0.15); border: 4px solid rgba(255,255,255,0.3);">
+                                <i class="fas fa-chalkboard-teacher"></i>
+                            </div>
+                            <div style="flex: 1;">
+                                <h3 style="margin: 0 0 0.5rem 0; color: white; font-size: 1.6rem; font-weight: 700; text-shadow: 0 2px 10px rgba(0,0,0,0.2);">Estelle Zhang</h3>
+                                <p style="color: rgba(255,255,255,0.95); font-weight: 500; margin: 0; font-size: 1rem; letter-spacing: 0.5px;">Tutor</p>
+                            </div>
+                        </div>
                     </div>
-                    <h3>Emma Thompson</h3>
-                    <p style="color: #0D7377; font-weight: 600;">Student Services Director</p>
-                    <p>Bachelor's in Psychology from Stanford University. Dedicated to ensuring every student has an amazing experience.</p>
+                    <div style="padding: 2rem; flex: 1; display: flex; flex-direction: column;">
+                        <div style="margin-bottom: 1.5rem; padding: 1.25rem; background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%); border-radius: 12px; border-left: 4px solid #7A99C7;">
+                            <p style="font-weight: 700; color: #2c3e50; margin-bottom: 1rem; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; display: flex; align-items: center; gap: 0.5rem;">
+                                <i class="fas fa-award" style="color: #7A99C7;"></i> Certifications
+                            </p>
+                            <ul style="list-style: none; padding: 0; margin: 0; line-height: 1.9;">
+                                <li style="color: #555; font-size: 0.9rem; margin-bottom: 0.6rem; display: flex; align-items: start; gap: 0.6rem;">
+                                    <i class="fas fa-check-circle" style="color: #7A99C7; margin-top: 0.2rem; flex-shrink: 0;"></i>
+                                    <span>Certificate for Teachers of Chinese to Speakers of Other Languages (CTCSOL)</span>
+                                </li>
+                                <li style="color: #555; font-size: 0.9rem; display: flex; align-items: start; gap: 0.6rem;">
+                                    <i class="fas fa-check-circle" style="color: #7A99C7; margin-top: 0.2rem; flex-shrink: 0;"></i>
+                                    <span>National Mandarin Professional Certificate</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div style="flex: 1; display: flex; flex-direction: column; gap: 1rem;">
+                            <p style="color: #555; line-height: 1.85; margin: 0; font-size: 0.95rem;">
+                                With several years of overseas study experience during my university years, and more than 6 years of experience teaching Chinese as a foreign language, I have not only accumulated extensive practical teaching experience but also trained new teachers in effective Chinese language instruction. Practical language knowledge, Chinese history & culture and other related topics are well combined in my teaching. I find it truly meaningful and exciting to help international students learn Chinese and understand China through my efforts.
+                            </p>
+                            <p style="color: #555; line-height: 1.85; margin: 0; font-size: 0.95rem;">
+                                Many of my students say: "You are a real Chinese teacher who truly knows how to teach international students." I deeply cherish that and will continue striving to help more international students to achieve their language goals. Join me to learn practical Chinese that you can use in real life, looking forward to seeing you at LensTalk.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Steve Tang -->
+                <div class="program-card teacher-card" style="padding: 0; background: white; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.12); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); height: 100%; display: flex; flex-direction: column; overflow: hidden; position: relative;">
+                    <div style="background: linear-gradient(135deg, #7A99C7 0%, #9BB5D9 100%); padding: 2.5rem 2rem 2rem; position: relative;">
+                        <div style="position: absolute; top: 0; right: 0; width: 150px; height: 150px; background: rgba(255,255,255,0.1); border-radius: 50%; transform: translate(30%, -30%);"></div>
+                        <div style="display: flex; align-items: center; gap: 1.5rem; position: relative; z-index: 1;">
+                            <div style="width: 100px; height: 100px; background: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #7A99C7; font-size: 3rem; flex-shrink: 0; box-shadow: 0 8px 25px rgba(0,0,0,0.15); border: 4px solid rgba(255,255,255,0.3);">
+                                <i class="fas fa-chalkboard-teacher"></i>
+                            </div>
+                            <div style="flex: 1;">
+                                <h3 style="margin: 0 0 0.5rem 0; color: white; font-size: 1.6rem; font-weight: 700; text-shadow: 0 2px 10px rgba(0,0,0,0.2);">Steve Tang</h3>
+                                <p style="color: rgba(255,255,255,0.95); font-weight: 500; margin: 0; font-size: 1rem; letter-spacing: 0.5px;">Tutor</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="padding: 2rem; flex: 1; display: flex; flex-direction: column;">
+                        <div style="margin-bottom: 1.5rem; padding: 1.25rem; background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%); border-radius: 12px; border-left: 4px solid #7A99C7;">
+                            <p style="font-weight: 700; color: #2c3e50; margin-bottom: 1rem; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; display: flex; align-items: center; gap: 0.5rem;">
+                                <i class="fas fa-award" style="color: #7A99C7;"></i> Certifications
+                            </p>
+                            <ul style="list-style: none; padding: 0; margin: 0; line-height: 1.9;">
+                                <li style="color: #555; font-size: 0.9rem; margin-bottom: 0.6rem; display: flex; align-items: start; gap: 0.6rem;">
+                                    <i class="fas fa-check-circle" style="color: #7A99C7; margin-top: 0.2rem; flex-shrink: 0;"></i>
+                                    <span>Certificate for Teachers of Chinese to Speakers of Other Languages (CTCSOL)</span>
+                                </li>
+                                <li style="color: #555; font-size: 0.9rem; display: flex; align-items: start; gap: 0.6rem;">
+                                    <i class="fas fa-check-circle" style="color: #7A99C7; margin-top: 0.2rem; flex-shrink: 0;"></i>
+                                    <span>National Mandarin Professional Certificate</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div style="flex: 1; display: flex; flex-direction: column; gap: 1rem;">
+                            <p style="color: #555; line-height: 1.85; margin: 0; font-size: 0.95rem;">
+                                With years of overseas studying and working experience and strong cross-cultural communication skills, I'm fluent in English and capable of bilingual instruction. I have a great passion and rich experience in teaching Chinese as a foreign language to students from various countries all over the world. My teaching formats range from one-on-one and small group classes to online courses, with particular expertise in HSK exam preparation, having successfully guided all my students to reach their language goals.
+                            </p>
+                            <p style="color: #555; line-height: 1.85; margin: 0; font-size: 0.95rem;">
+                                Moreover, Chinese cultural elements are naturally integrated in my class, enabling students to deeply experience the charm of Chinese culture while learning language. My teaching style is engaging and approachable, earning me high praise from all my students. Looking forward to meeting you at Lenstalk and start a thrilling journey of Chinese learning.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Nancy Li -->
+                <div class="program-card teacher-card" style="padding: 0; background: white; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.12); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); height: 100%; display: flex; flex-direction: column; overflow: hidden; position: relative;">
+                    <div style="background: linear-gradient(135deg, #7A99C7 0%, #9BB5D9 100%); padding: 2.5rem 2rem 2rem; position: relative;">
+                        <div style="position: absolute; top: 0; right: 0; width: 150px; height: 150px; background: rgba(255,255,255,0.1); border-radius: 50%; transform: translate(30%, -30%);"></div>
+                        <div style="display: flex; align-items: center; gap: 1.5rem; position: relative; z-index: 1;">
+                            <div style="width: 100px; height: 100px; background: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #7A99C7; font-size: 3rem; flex-shrink: 0; box-shadow: 0 8px 25px rgba(0,0,0,0.15); border: 4px solid rgba(255,255,255,0.3);">
+                                <i class="fas fa-chalkboard-teacher"></i>
+                            </div>
+                            <div style="flex: 1;">
+                                <h3 style="margin: 0 0 0.5rem 0; color: white; font-size: 1.6rem; font-weight: 700; text-shadow: 0 2px 10px rgba(0,0,0,0.2);">Nancy Li</h3>
+                                <p style="color: rgba(255,255,255,0.95); font-weight: 500; margin: 0; font-size: 1rem; letter-spacing: 0.5px;">Tutor</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="padding: 2rem; flex: 1; display: flex; flex-direction: column;">
+                        <div style="margin-bottom: 1.5rem; padding: 1.25rem; background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%); border-radius: 12px; border-left: 4px solid #7A99C7;">
+                            <p style="font-weight: 700; color: #2c3e50; margin-bottom: 1rem; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; display: flex; align-items: center; gap: 0.5rem;">
+                                <i class="fas fa-award" style="color: #7A99C7;"></i> Certifications
+                            </p>
+                            <ul style="list-style: none; padding: 0; margin: 0; line-height: 1.9;">
+                                <li style="color: #555; font-size: 0.9rem; margin-bottom: 0.6rem; display: flex; align-items: start; gap: 0.6rem;">
+                                    <i class="fas fa-check-circle" style="color: #7A99C7; margin-top: 0.2rem; flex-shrink: 0;"></i>
+                                    <span>Certificate for Teachers of Chinese to Speakers of Other Languages (CTCSOL)</span>
+                                </li>
+                                <li style="color: #555; font-size: 0.9rem; display: flex; align-items: start; gap: 0.6rem;">
+                                    <i class="fas fa-check-circle" style="color: #7A99C7; margin-top: 0.2rem; flex-shrink: 0;"></i>
+                                    <span>National Mandarin Professional Certificate</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div style="flex: 1; display: flex; flex-direction: column; gap: 1rem;">
+                            <p style="color: #555; line-height: 1.85; margin: 0; font-size: 0.95rem;">
+                                I was born in beautiful Dali, a place rich in ethnic minority cultures, the gene for cultural exchange has been planted in my body at birth. And both of my parents are English teachers, which is a great help for my cross-border communication.
+                            </p>
+                            <p style="color: #555; line-height: 1.85; margin: 0; font-size: 0.95rem;">
+                                Fortunately I joined a top Chinese financial institution with global branches after graduation, allowing me to work with so many international clients in 15 years, language and culture exchange naturally happened, which deepened my passion for cross-cultural communication and ultimately inspired me to become a Chinese teacher. Rich practical business experience and client resources, coupled with excellent cross-cultural communication skills, have made me stand out in the fields of Business Chinese (BCT) and Conversational Chinese. Looking forward to meet every unique you at Lenstalk.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Eddie Wang -->
+                <div class="program-card teacher-card" style="padding: 0; background: white; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.12); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); height: 100%; display: flex; flex-direction: column; overflow: hidden; position: relative;">
+                    <div style="background: linear-gradient(135deg, #7A99C7 0%, #9BB5D9 100%); padding: 2.5rem 2rem 2rem; position: relative;">
+                        <div style="position: absolute; top: 0; right: 0; width: 150px; height: 150px; background: rgba(255,255,255,0.1); border-radius: 50%; transform: translate(30%, -30%);"></div>
+                        <div style="display: flex; align-items: center; gap: 1.5rem; position: relative; z-index: 1;">
+                            <div style="width: 100px; height: 100px; background: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #7A99C7; font-size: 3rem; flex-shrink: 0; box-shadow: 0 8px 25px rgba(0,0,0,0.15); border: 4px solid rgba(255,255,255,0.3);">
+                                <i class="fas fa-hands-helping"></i>
+                            </div>
+                            <div style="flex: 1;">
+                                <h3 style="margin: 0 0 0.5rem 0; color: white; font-size: 1.6rem; font-weight: 700; text-shadow: 0 2px 10px rgba(0,0,0,0.2);">Eddie Wang</h3>
+                                <p style="color: rgba(255,255,255,0.95); font-weight: 500; margin: 0; font-size: 1rem; letter-spacing: 0.5px;">Life Advisor</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="padding: 2rem; flex: 1; display: flex; flex-direction: column;">
+                        <div style="margin-bottom: 1.5rem; padding: 1.25rem; background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%); border-radius: 12px; border-left: 4px solid #7A99C7;">
+                            <p style="font-weight: 700; color: #2c3e50; margin-bottom: 1rem; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; display: flex; align-items: center; gap: 0.5rem;">
+                                <i class="fas fa-award" style="color: #7A99C7;"></i> Certification
+                            </p>
+                            <ul style="list-style: none; padding: 0; margin: 0; line-height: 1.9;">
+                                <li style="color: #555; font-size: 0.9rem; display: flex; align-items: start; gap: 0.6rem;">
+                                    <i class="fas fa-check-circle" style="color: #7A99C7; margin-top: 0.2rem; flex-shrink: 0;"></i>
+                                    <span>Bachelor degree in English</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div style="flex: 1; display: flex; flex-direction: column; gap: 1rem;">
+                            <p style="color: #555; line-height: 1.85; margin: 0; font-size: 0.95rem;">
+                                I am a Life Advisor at Lenstalk, I hold a bachelor's degree in English and have extensive experience working in international learning environments, which enables me to communicate clearly and effectively with people from diverse cultural backgrounds.
+                            </p>
+                            <p style="color: #555; line-height: 1.85; margin: 0; font-size: 0.95rem;">
+                                As a native of Yunnan, I have an in-depth knowledge of Kunming, including its local culture, transportation system, daily life, and living environment. I am familiar with the common challenges people may encounter when arriving in China and adapting to life in Kunming. I provide support in various aspects of daily life, including accommodation guidance, local transportation, daily services, mobile applications, and cultural adjustment. I am committed to helping international students settle in smoothly, feel supported, and enjoy a safe, comfortable, and positive learning experience in Kunming.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Accreditation & Partnerships -->
-    <section class="section" style="background-color: #f8f9fa;">
-        <div class="container">
-            <h2 class="section-title">Accreditation & Partnerships</h2>
-            <div class="community-features" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
-                <div class="feature">
-                    <div class="feature-icon">
-                        <i class="fas fa-certificate"></i>
-                    </div>
-                    <div>
-                        <h4>Ministry of Education</h4>
-                        <p>Officially recognized by the Chinese Ministry of Education for international student education</p>
-                    </div>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon">
-                        <i class="fas fa-handshake"></i>
-                    </div>
-                    <div>
-                        <h4>University Partnerships</h4>
-                        <p>Partnered with 50+ universities worldwide for exchange programs and credit transfer</p>
-                    </div>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon">
-                        <i class="fas fa-building"></i>
-                    </div>
-                    <div>
-                        <h4>Corporate Partnerships</h4>
-                        <p>Trusted by Fortune 500 companies for employee Chinese language training</p>
-                    </div>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon">
-                        <i class="fas fa-globe"></i>
-                    </div>
-                    <div>
-                        <h4>International Recognition</h4>
-                        <p>Member of the International Association of Chinese Language Education</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Awards & Achievements -->
-    <section class="section">
-        <div class="container">
-            <h2 class="section-title">Awards & Achievements</h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
-                <div class="program-card">
-                    <h3><i class="fas fa-trophy"></i> 2023 Excellence Award</h3>
-                    <p>Best Chinese Language School by International Education Association</p>
-                </div>
-                <div class="program-card">
-                    <h3><i class="fas fa-star"></i> 2022 Innovation Award</h3>
-                    <p>Outstanding Achievement in Online Chinese Education</p>
-                </div>
-                <div class="program-card">
-                    <h3><i class="fas fa-medal"></i> 2021 Quality Award</h3>
-                    <p>Highest Student Satisfaction Rate (98%) among Chinese language schools</p>
-                </div>
-                <div class="program-card">
-                    <h3><i class="fas fa-gem"></i> 2020 Partnership Award</h3>
-                    <p>Best Corporate Training Program by China Business Association</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- Section Transition -->
+    <div class="section-transition"></div>
 
     <!-- Mission & Vision -->
-    <section class="section" style="background-color: #2c3e50; color: white;">
-        <div class="container">
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
-                <div>
-                    <h2 style="color: white; margin-bottom: 1rem;">Our Mission</h2>
-                    <p style="font-size: 1.2rem; opacity: 0.9; margin-bottom: 2rem;">
+    <section class="section" style="background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%); color: white; padding: 80px 0; position: relative; overflow: hidden;">
+        <div class="container" style="max-width: 1200px; position: relative; z-index: 2;">
+            <div style="text-align: center; margin-bottom: 4rem;">
+                <span style="display: inline-block; color: rgba(255,255,255,0.8); font-weight: 600; letter-spacing: 2px; margin-bottom: 1rem;">OUR COMMITMENT</span>
+                <h2 style="color: white; font-size: 2.5rem; margin-bottom: 0.5rem;">Mission & Vision</h2>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 3rem; align-items: start;">
+                <div style="background: rgba(255,255,255,0.05); padding: 3rem; border-radius: 16px; backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); transition: transform 0.3s ease;">
+                    <div style="font-size: 3.5rem; color: #7A99C7; margin-bottom: 1.5rem; text-align: center;">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h2 style="color: white; margin-bottom: 1.5rem; font-size: 1.8rem; text-align: center;">Our Mission</h2>
+                    <p style="font-size: 1.1rem; line-height: 1.8; opacity: 0.95; text-align: center;">
                         To provide world-class Chinese language education that bridges cultures, 
                         connects people, and opens doors to new opportunities in our globalized world.
                     </p>
                 </div>
-                <div>
-                    <h2 style="color: white; margin-bottom: 1rem;">Our Vision</h2>
-                    <p style="font-size: 1.2rem; opacity: 0.9;">
+                <div style="background: rgba(255,255,255,0.05); padding: 3rem; border-radius: 16px; backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); transition: transform 0.3s ease;">
+                    <div style="font-size: 3.5rem; color: #7A99C7; margin-bottom: 1.5rem; text-align: center;">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h2 style="color: white; margin-bottom: 1.5rem; font-size: 1.8rem; text-align: center;">Our Vision</h2>
+                    <p style="font-size: 1.1rem; line-height: 1.8; opacity: 0.95; text-align: center;">
                         To be the leading institution for Chinese language learning, 
                         recognized worldwide for our innovative approach, cultural immersion, 
                         and exceptional student outcomes.
@@ -243,16 +473,26 @@
         </div>
     </section>
 
+    <!-- Section Transition -->
+    <div class="section-transition section-transition-reverse"></div>
+
     <!-- Call to Action -->
-    <section class="section">
-        <div class="container" style="text-align: center;">
-            <h2 style="margin-bottom: 1rem;">Join Our Story</h2>
-            <p style="font-size: 1.2rem; margin-bottom: 2rem; color: #666;">
-                Be part of our mission to connect the world through Chinese language and culture
-            </p>
-            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                <a href="apply.html" class="btn btn-primary">Apply Now</a>
-                <a href="contact.html" class="btn btn-secondary">Contact Us</a>
+    <section class="section" style="padding: 80px 0; background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);">
+        <div class="container" style="max-width: 800px; text-align: center;">
+            <div style="background: white; padding: 4rem 3rem; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.1);">
+                <h2 style="margin-bottom: 1.5rem; font-size: 2.2rem; color: #2c3e50; font-weight: 600;">Ready to Start Your Journey?</h2>
+                <p style="font-size: 1.15rem; margin-bottom: 2.5rem; color: #666; line-height: 1.7;">
+                    Be part of our mission to connect the world through Chinese language and culture. Join thousands of students who have transformed their futures through language mastery.
+                </p>
+                <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="apply.html" class="btn btn-primary" style="padding: 1rem 2.5rem; font-size: 1.1rem; font-weight: 600;">
+                        <span>Apply Now</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="contact.html" class="btn btn-secondary" style="padding: 1rem 2.5rem; font-size: 1.1rem; font-weight: 600;">
+                        Contact Us
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -307,6 +547,45 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             renderFooterLocations();
+            
+            // Add hover effects to value cards
+            const valueCards = document.querySelectorAll('.value');
+            valueCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-8px)';
+                    this.style.boxShadow = '0 8px 30px rgba(122, 153, 199, 0.2)';
+                });
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                    this.style.boxShadow = '0 4px 20px rgba(0,0,0,0.08)';
+                });
+            });
+            
+            // Add hover effects to team cards
+            const teamCards = document.querySelectorAll('.teacher-card');
+            teamCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-8px) scale(1.02)';
+                    this.style.boxShadow = '0 15px 50px rgba(0,0,0,0.2)';
+                });
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                    this.style.boxShadow = '0 10px 40px rgba(0,0,0,0.12)';
+                });
+            });
+            
+            // Add hover effects to mission/vision cards
+            const missionCards = document.querySelectorAll('[style*="backdrop-filter"]');
+            missionCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-5px)';
+                    this.style.background = 'rgba(255,255,255,0.08)';
+                });
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                    this.style.background = 'rgba(255,255,255,0.05)';
+                });
+            });
         });
     </script>
     <script src="js/navigation.js"></script>

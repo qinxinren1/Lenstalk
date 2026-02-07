@@ -233,7 +233,7 @@
         transform: translateX(-50%);
         width: 2px;
         height: 2rem;
-        background: linear-gradient(to bottom, #C85A3A, rgba(200, 90, 58, 0.3));
+        background: linear-gradient(to bottom, #7A99C7, rgba(122, 153, 199, 0.3));
     }
 
     .step-number {
