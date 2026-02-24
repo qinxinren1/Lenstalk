@@ -8,6 +8,22 @@
     <link rel="stylesheet" href="css/responsive.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @media (max-width: 768px) {
+            #locations-grid-travel {
+                grid-template-columns: 1fr !important;
+                gap: 1.5rem !important;
+            }
+            .section > .container > div:first-child {
+                margin-bottom: 2rem !important;
+            }
+        }
+        @media (max-width: 480px) {
+            #locations-grid-travel {
+                gap: 1rem !important;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
@@ -28,15 +44,15 @@
     </nav>
 
     <!-- Hero -->
-    <section class="hero" style="background-image: url('assets/hero/travel.jpg'); background-size: cover; background-position: center; position: relative;">
-        <div class="hero-overlay" style="position: absolute; inset: 0; background: rgba(0,0,0,0.45);"></div>
-        <div class="hero-container" style="position: relative; z-index: 2; min-height: 70vh; display: flex; flex-direction: column; justify-content: center;">
-            <div class="container">
-                <h1 class="hero-title" style="color: #fff; font-size: 3rem; font-weight: 700; max-width: 720px;">One on one Travel Chinese</h1>
-                <p style="color: #fff; font-size: 1.2rem; max-width: 680px; margin-top: 1.5rem; line-height: 1.8;">
+    <section class="hero" style="background-image: url('assets/Home-one-on-one Travel Chinese/01.jpg'); background-size: cover; background-position: center; position: relative; padding: 120px 0 80px;">
+        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.45);"></div>
+        <div class="container" style="position: relative; z-index: 2;">
+            <div style="text-align: center; color: white; max-width: 900px; margin: 0 auto;">
+                <h1 id="program-travel-title" style="font-size: clamp(3rem, 7vw, 5.5rem); font-weight: 700; margin-bottom: 0.5rem; line-height: 1.1; text-shadow: 0 4px 20px rgba(0,0,0,0.4), 0 2px 10px rgba(0,0,0,0.2); letter-spacing: -0.03em; opacity: 1; font-family: 'Inter', sans-serif;">One on one Travel Chinese</h1>
+                <p id="program-travel-subtitle" style="font-size: clamp(1.1rem, 2.2vw, 1.4rem); line-height: 1.7; opacity: 0.92; margin-bottom: 2rem; text-shadow: 0 2px 8px rgba(0,0,0,0.3); font-weight: 400; max-width: 650px; margin-left: auto; margin-right: auto; font-family: 'Inter', sans-serif; letter-spacing: 0.01em;">
                     Learn the language skills you need to explore China with confidence. From transportation and dining to local interactions, every lesson equips you for real adventures.
                 </p>
-                <div style="margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+                <div style="margin-top: 2rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
                     <a href="#program-introduction" class="btn btn-primary">Explore Program</a>
                     <a href="apply.html" class="btn btn-secondary">Apply Now</a>
                 </div>
@@ -47,7 +63,8 @@
     <!-- Program Introduction -->
     <section id="program-introduction" class="section">
         <div class="container">
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+            <!-- Text Content - Two Columns -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
                 <div>
                     <h2 class="section-title">Program Introduction</h2>
                     <p style="font-size: 1.05rem; color: #555; line-height: 1.8; margin-bottom: 1.5rem;">
@@ -56,7 +73,7 @@
                     <p style="font-size: 1.05rem; color: #555; line-height: 1.8; margin-bottom: 1.5rem;">
                         Tell us your current level, travel plans, and the experiences you want to unlock. We customize your curriculum and match you with a tutor who understands your route and interests.
                     </p>
-                    <p style="font-size: 1.05rem; color: #555; line-height: 1.8;">
+                    <p style="font-size: 1.05rem; color: #555; line-height: 1.8; margin-bottom: 2rem;">
                         Our learning-practice model blends targeted language instruction with immersive experiences. Offline classes take you into real-life scenarios—ordering local dishes, riding public transport, exploring landmarks—with your tutor by your side. Online sessions recreate the same contexts virtually, ensuring consistent quality wherever you are.
                     </p>
                 </div>
@@ -81,6 +98,10 @@
                         </li>
                     </ul>
                 </div>
+            </div>
+            <!-- Image - Full Width Row -->
+            <div style="width: 100%; border-radius: 16px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.15);">
+                <img src="assets/Home-one-on-one Travel Chinese/02.jpg" alt="Travel Chinese Program" style="width: 100%; height: auto; display: block;">
             </div>
         </div>
     </section>
@@ -140,19 +161,29 @@
     <!-- Locations -->
     <section class="section" style="background-color: #f8f9fa;">
         <div class="container">
-            <h2 class="section-title">★ Available Learning Locations</h2>
-            <div style="background: white; border: 1px solid #e1e8ed; border-radius: 12px; padding: 1.75rem; box-shadow: 0 8px 22px rgba(0,0,0,0.05); margin-bottom: 2rem; display: flex; flex-direction: column; gap: 0.75rem;">
-                <h3 style="margin: 0; color: #2c3e50;">Online Program</h3>
-                <p style="margin: 0; color: #555; line-height: 1.7;">Study anywhere over the world</p>
-                <a href="program.html#online-section" class="btn btn-secondary" style="align-self: flex-start;">Discover Online Class</a>
+            <!-- Online Program Card -->
+            <a href="program.html#online-section" style="background: white; border: 2px solid #e1e8ed; border-radius: 16px; padding: 2rem; text-decoration: none; color: #2c3e50; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(0,0,0,0.06); display: flex; flex-direction: column; margin-bottom: 2rem;" onmouseover="this.style.transform='translateY(-6px)'; this.style.boxShadow='0 12px 28px rgba(0,0,0,0.12)'; this.style.borderColor='#7A99C7';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.06)'; this.style.borderColor='#e1e8ed';">
+                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 0.75rem;">
+                    <div style="width: 40px; height: 40px; background: linear-gradient(135deg, #7A99C7 0%, #6A89B7 100%); border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                        <i class="fas fa-globe" style="color: white; font-size: 1.25rem;"></i>
+                    </div>
+                    <h4 style="margin: 0; color: #2c3e50; font-size: 1.25rem; font-weight: 600;">Online Program</h4>
+                </div>
+                <p style="margin: 0; color: #666; font-size: 0.95rem; line-height: 1.6;">Study anywhere over the world</p>
+            </a>
+            
+            <!-- Offline Program Card -->
+            <div style="background: white; border: 2px solid #e1e8ed; border-radius: 16px; padding: 2.5rem; box-shadow: 0 4px 12px rgba(0,0,0,0.06);">
+                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem;">
+                    <div style="width: 40px; height: 40px; background: linear-gradient(135deg, #7A99C7 0%, #6A89B7 100%); border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                        <i class="fas fa-map-marker-alt" style="color: white; font-size: 1.25rem;"></i>
+                    </div>
+                    <h3 style="margin: 0; color: #2c3e50; font-size: 1.5rem; font-weight: 600;">Offline Program</h3>
+                </div>
+                <div id="locations-grid-travel" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+                    <!-- Locations will be generated by JavaScript -->
+                </div>
             </div>
-            <h3 style="color: #2c3e50; font-size: 1.4rem; margin-bottom: 1.5rem;">Offline Program</h3>
-            <div id="locations-grid-travel" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem;">
-                <!-- Locations will be generated by JavaScript -->
-            </div>
-            <p style="margin-top: 1.5rem; color: #555; line-height: 1.7;">
-                Click online class, offline class or any specific location to link to the corresponding detailed page.
-            </p>
         </div>
     </section>
 

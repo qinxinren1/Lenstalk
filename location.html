@@ -12,13 +12,15 @@
         /* Location Page Specific Responsive Styles */
         @media (max-width: 968px) {
             #location-title {
-                font-size: 2.5rem !important;
+                font-size: clamp(2.5rem, 8vw, 4rem) !important;
+                font-weight: 700 !important;
             }
             #location-subtitle {
-                font-size: 1.5rem !important;
+                font-size: clamp(1.5rem, 5vw, 2.2rem) !important;
+                font-weight: 500 !important;
             }
             #location-hero-description {
-                font-size: 1.1rem !important;
+                font-size: clamp(1rem, 2.5vw, 1.2rem) !important;
             }
             .container > div[style*="grid-template-columns"] {
                 grid-template-columns: 1fr !important;
@@ -34,13 +36,15 @@
         }
         @media (max-width: 768px) {
             #location-title {
-                font-size: 2rem !important;
+                font-size: clamp(2.2rem, 7vw, 3.2rem) !important;
+                font-weight: 700 !important;
             }
             #location-subtitle {
-                font-size: 1.3rem !important;
+                font-size: clamp(1.3rem, 4vw, 1.8rem) !important;
+                font-weight: 500 !important;
             }
             #location-hero-description {
-                font-size: 1rem !important;
+                font-size: clamp(0.95rem, 2.2vw, 1.1rem) !important;
             }
             #location-description {
                 font-size: 1.1rem !important;
@@ -51,10 +55,12 @@
         }
         @media (max-width: 480px) {
             #location-title {
-                font-size: 1.8rem !important;
+                font-size: clamp(1.8rem, 6vw, 2.5rem) !important;
+                font-weight: 700 !important;
             }
             #location-subtitle {
-                font-size: 1.2rem !important;
+                font-size: clamp(1.1rem, 3.5vw, 1.4rem) !important;
+                font-weight: 500 !important;
             }
         }
     </style>
@@ -78,12 +84,13 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero" style="padding: 120px 0 80px;">
-        <div class="container">
+    <section class="hero" style="padding: 120px 0 80px; background: linear-gradient(135deg, #5B7DB8 0%, #7A99C7 50%, #8AB3D9 100%); position: relative; overflow: hidden;">
+        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(circle at 20% 50%, rgba(122, 153, 199, 0.4) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(90, 125, 184, 0.3) 0%, transparent 50%); opacity: 0.7;"></div>
+        <div class="container" style="position: relative; z-index: 2;">
             <div style="text-align: center; color: white; max-width: 900px; margin: 0 auto;">
-                <h1 id="location-title" style="font-size: 3.5rem; font-weight: 700; margin-bottom: 1rem; line-height: 1.2;">Kunming HQ</h1>
-                <h2 id="location-subtitle" style="font-size: 2rem; font-weight: 600; margin-bottom: 1.5rem; opacity: 0.95;">Kunming</h2>
-                <p id="location-hero-description" style="font-size: 1.3rem; line-height: 1.8; opacity: 0.9; margin-bottom: 2rem;">
+                <h1 id="location-title" style="font-size: clamp(3rem, 7vw, 5.5rem); font-weight: 700; margin-bottom: 0.5rem; line-height: 1.1; text-shadow: 0 4px 20px rgba(0,0,0,0.4), 0 2px 10px rgba(0,0,0,0.2); letter-spacing: -0.03em; opacity: 1; font-family: 'Inter', sans-serif;">Kunming HQ</h1>
+                <h2 id="location-subtitle" style="font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 500; margin-bottom: 2rem; opacity: 0.95; text-shadow: 0 2px 10px rgba(0,0,0,0.3); letter-spacing: 0.02em; font-family: 'Inter', sans-serif; color: rgba(255,255,255,0.9);">Kunming</h2>
+                <p id="location-hero-description" style="font-size: clamp(1.1rem, 2.2vw, 1.4rem); line-height: 1.7; opacity: 0.92; margin-bottom: 2rem; text-shadow: 0 2px 8px rgba(0,0,0,0.3); font-weight: 400; max-width: 650px; margin-left: auto; margin-right: auto; font-family: 'Inter', sans-serif; letter-spacing: 0.01em;">
                     Discover Chinese culture in the heart of Yunnan Province
                 </p>
             </div>
@@ -91,97 +98,146 @@
     </section>
 
     <!-- Location Content -->
-    <section class="section" style="padding: 60px 0;">
-        <div class="container">
+    <section class="section" style="padding: 60px 0; background: #fafbfc;">
+        <div class="container" style="max-width: 1400px;">
             <!-- Main Content Grid -->
-            <div style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 4rem; align-items: start; margin-bottom: 4rem;">
-                <!-- Left Side - Text Content -->
-                <div class="text-content">
-                    <div style="margin-bottom: 2.5rem;">
-                        <p id="location-description" style="font-size: 1.05rem; color: #333; margin-bottom: 1.5rem; line-height: 1.8; font-weight: 400; font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+            <div style="display: grid; grid-template-columns: 1.3fr 0.7fr; gap: 3.5rem; align-items: start; margin-bottom: 4rem;">
+                <!-- Left Side - Text Content Only -->
+                <div class="text-content" style="background: white; border-radius: 16px; padding: 3rem; box-shadow: 0 4px 20px rgba(0,0,0,0.06);">
+                    <div>
+                        <p id="location-description" style="font-size: 1.1rem; color: #2c3e50; margin-bottom: 1.75rem; line-height: 1.9; font-weight: 400; font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
                             Kunming is the capital city of Yunnan Province, which is the only place in China to be included in The New York Times' 2026 list of "52 Places to Go", our main campus is located in the core of Kunming city center, super convenient for you to learn and live your life in Kunming.
                         </p>
-                        <p style="font-size: 1.05rem; color: #333; margin-bottom: 1.5rem; line-height: 1.8; font-weight: 400; font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+                        <p style="font-size: 1.1rem; color: #2c3e50; margin-bottom: 1.75rem; line-height: 1.9; font-weight: 400; font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
                             The core modern CBD, the famous Nanqiang Market, Nanping Street, Kunming Old Street, the Golden Horse and Jade Rooster Archway are all around you, beautiful Green Lake, Wenlin Street, Culture Alley Street are also not far from you. Delicious local food and snacks are available everywhere by your side, you just need to stand up and go downstairs to encounter all kinds of learning and living scenes you need, meet the vivid local life.
                         </p>
-                        <p style="font-size: 1.05rem; color: #333; margin-bottom: 1.5rem; line-height: 1.8; font-weight: 400; font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+                        <p style="font-size: 1.1rem; color: #2c3e50; margin-bottom: 1.75rem; line-height: 1.9; font-weight: 400; font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
                             Three meals Monday to Friday and accommodation are well prepared for you, together with all kinds of after-class activities and culture activities, enthusiastic and professional tutors are also waiting for you here.
                         </p>
-                        <p style="font-size: 1.05rem; color: #333; margin-bottom: 0; line-height: 1.8; font-weight: 400; font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+                        <p style="font-size: 1.1rem; color: #2c3e50; margin-bottom: 0; line-height: 1.9; font-weight: 500; font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #7A99C7;">
                             We sincerely look forward to meeting you in beautiful Kunming!
                         </p>
                     </div>
+                </div>
+                
+                <!-- Right Side - Two Cards -->
+                <div class="media-section" style="display: flex; flex-direction: column; gap: 1.25rem; position: sticky; top: 120px;">
+                    <!-- Quick Info Card -->
+                    <div style="background: white; border-radius: 12px; padding: 1.15rem; box-shadow: 0 6px 25px rgba(0,0,0,0.08); border: 1px solid #e8ecef; transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 10px 35px rgba(0,0,0,0.12)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 6px 25px rgba(0,0,0,0.08)'">
+                        <h4 style="color: #2c3e50; margin-bottom: 1rem; font-size: 1rem; font-weight: 700; display: flex; align-items: center; gap: 0.5rem; padding-bottom: 0.75rem; border-bottom: 2px solid #f0f0f0;">
+                            <i class="fas fa-info-circle" style="color: #7A99C7; font-size: 0.95rem;"></i>
+                            Quick Info
+                        </h4>
+                        <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+                            <div style="display: flex; align-items: center; gap: 0.7rem; padding: 0.4rem 0;">
+                                <div style="width: 32px; height: 32px; background: linear-gradient(135deg, #7A99C7 0%, #6A89B7 100%); border-radius: 7px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                    <i class="fas fa-map-marker-alt" style="color: white; font-size: 0.8rem;"></i>
+                                </div>
+                                <span style="color: #444; font-size: 0.875rem; font-weight: 500;">City Center Location</span>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 0.7rem; padding: 0.4rem 0;">
+                                <div style="width: 32px; height: 32px; background: linear-gradient(135deg, #7A99C7 0%, #6A89B7 100%); border-radius: 7px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                    <i class="fas fa-utensils" style="color: white; font-size: 0.8rem;"></i>
+                                </div>
+                                <span style="color: #444; font-size: 0.875rem; font-weight: 500;">3 Meals Included</span>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 0.7rem; padding: 0.4rem 0;">
+                                <div style="width: 32px; height: 32px; background: linear-gradient(135deg, #7A99C7 0%, #6A89B7 100%); border-radius: 7px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                    <i class="fas fa-bed" style="color: white; font-size: 0.8rem;"></i>
+                                </div>
+                                <span style="color: #444; font-size: 0.875rem; font-weight: 500;">Accommodation Provided</span>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 0.7rem; padding: 0.4rem 0;">
+                                <div style="width: 32px; height: 32px; background: linear-gradient(135deg, #7A99C7 0%, #6A89B7 100%); border-radius: 7px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                    <i class="fas fa-users" style="color: white; font-size: 0.8rem;"></i>
+                                </div>
+                                <span style="color: #444; font-size: 0.875rem; font-weight: 500;">One-on-One Teaching</span>
+                            </div>
+                        </div>
+                    </div>
                     
-                    <!-- Features Card -->
-                    <div style="background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%); border-radius: 16px; padding: 2.5rem; box-shadow: 0 8px 30px rgba(0,0,0,0.08); border: 1px solid #eee; margin-bottom: 2rem;">
-                        <h3 style="color: #7A99C7; margin-bottom: 2rem; font-size: 1.8rem; font-weight: 700; display: flex; align-items: center; gap: 0.5rem;">
-                            <i class="fas fa-star" style="font-size: 1.5rem;"></i>
+                    <!-- Why Choose Kunming Card -->
+                    <div style="background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%); border-radius: 12px; padding: 1.15rem; box-shadow: 0 6px 25px rgba(0,0,0,0.08); border: 1px solid #e8ecef; transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 10px 35px rgba(0,0,0,0.12)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 6px 25px rgba(0,0,0,0.08)'">
+                        <h3 style="color: #2c3e50; margin-bottom: 0.9rem; font-size: 1rem; font-weight: 700; display: flex; align-items: center; gap: 0.5rem; padding-bottom: 0.7rem; border-bottom: 2px solid #f0f0f0;">
+                            <i class="fas fa-star" style="color: #7A99C7; font-size: 0.95rem;"></i>
                             Why Choose Kunming?
                         </h3>
-                        <ul id="location-features" style="list-style: none; padding: 0;">
-                            <li style="margin-bottom: 1.2rem; display: flex; align-items: flex-start; padding: 1rem; background: white; border-radius: 8px; transition: transform 0.2s ease, box-shadow 0.2s ease;" onmouseover="this.style.transform='translateX(5px)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='translateX(0)'; this.style.boxShadow='none'">
-                                <i class="fas fa-check-circle" style="color: #27ae60; margin-right: 1rem; margin-top: 0.2rem; font-size: 1.2rem; flex-shrink: 0;"></i>
-                                <span id="feature-1" style="font-size: 1.05rem; color: #333; line-height: 1.6;">Spring-like climate year-round</span>
+                        <ul id="location-features" style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 0.6rem;">
+                            <li style="display: flex; align-items: flex-start; padding: 0.55rem; background: white; border-radius: 6px; border-left: 3px solid #27ae60; transition: all 0.2s ease;" onmouseover="this.style.transform='translateX(3px)'; this.style.boxShadow='0 4px 12px rgba(39, 174, 96, 0.15)'" onmouseout="this.style.transform='translateX(0)'; this.style.boxShadow='none'">
+                                <i class="fas fa-check-circle" style="color: #27ae60; margin-right: 0.55rem; margin-top: 0.05rem; font-size: 0.75rem; flex-shrink: 0;"></i>
+                                <span id="feature-1" style="font-size: 0.8rem; color: #333; line-height: 1.35; font-weight: 500;">Spring-like climate year-round</span>
                             </li>
-                            <li style="margin-bottom: 1.2rem; display: flex; align-items: flex-start; padding: 1rem; background: white; border-radius: 8px; transition: transform 0.2s ease, box-shadow 0.2s ease;" onmouseover="this.style.transform='translateX(5px)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='translateX(0)'; this.style.boxShadow='none'">
-                                <i class="fas fa-check-circle" style="color: #27ae60; margin-right: 1rem; margin-top: 0.2rem; font-size: 1.2rem; flex-shrink: 0;"></i>
-                                <span id="feature-2" style="font-size: 1.05rem; color: #333; line-height: 1.6;">Cultural diversity and ethnic heritage</span>
+                            <li style="display: flex; align-items: flex-start; padding: 0.55rem; background: white; border-radius: 6px; border-left: 3px solid #27ae60; transition: all 0.2s ease;" onmouseover="this.style.transform='translateX(3px)'; this.style.boxShadow='0 4px 12px rgba(39, 174, 96, 0.15)'" onmouseout="this.style.transform='translateX(0)'; this.style.boxShadow='none'">
+                                <i class="fas fa-check-circle" style="color: #27ae60; margin-right: 0.55rem; margin-top: 0.05rem; font-size: 0.75rem; flex-shrink: 0;"></i>
+                                <span id="feature-2" style="font-size: 0.8rem; color: #333; line-height: 1.35; font-weight: 500;">Cultural diversity and ethnic heritage</span>
                             </li>
-                            <li style="margin-bottom: 1.2rem; display: flex; align-items: flex-start; padding: 1rem; background: white; border-radius: 8px; transition: transform 0.2s ease, box-shadow 0.2s ease;" onmouseover="this.style.transform='translateX(5px)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='translateX(0)'; this.style.boxShadow='none'">
-                                <i class="fas fa-check-circle" style="color: #27ae60; margin-right: 1rem; margin-top: 0.2rem; font-size: 1.2rem; flex-shrink: 0;"></i>
-                                <span id="feature-3" style="font-size: 1.05rem; color: #333; line-height: 1.6;">Core Transportation hub of Yunnan</span>
+                            <li style="display: flex; align-items: flex-start; padding: 0.55rem; background: white; border-radius: 6px; border-left: 3px solid #27ae60; transition: all 0.2s ease;" onmouseover="this.style.transform='translateX(3px)'; this.style.boxShadow='0 4px 12px rgba(39, 174, 96, 0.15)'" onmouseout="this.style.transform='translateX(0)'; this.style.boxShadow='none'">
+                                <i class="fas fa-check-circle" style="color: #27ae60; margin-right: 0.55rem; margin-top: 0.05rem; font-size: 0.75rem; flex-shrink: 0;"></i>
+                                <span id="feature-3" style="font-size: 0.8rem; color: #333; line-height: 1.35; font-weight: 500;">Core Transportation hub of Yunnan</span>
                             </li>
-                            <li style="margin-bottom: 1.2rem; display: flex; align-items: flex-start; padding: 1rem; background: white; border-radius: 8px; transition: transform 0.2s ease, box-shadow 0.2s ease;" onmouseover="this.style.transform='translateX(5px)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='translateX(0)'; this.style.boxShadow='none'">
-                                <i class="fas fa-check-circle" style="color: #27ae60; margin-right: 1rem; margin-top: 0.2rem; font-size: 1.2rem; flex-shrink: 0;"></i>
-                                <span id="feature-4" style="font-size: 1.05rem; color: #333; line-height: 1.6;">Gateway to Southeast Asia</span>
+                            <li style="display: flex; align-items: flex-start; padding: 0.55rem; background: white; border-radius: 6px; border-left: 3px solid #27ae60; transition: all 0.2s ease;" onmouseover="this.style.transform='translateX(3px)'; this.style.boxShadow='0 4px 12px rgba(39, 174, 96, 0.15)'" onmouseout="this.style.transform='translateX(0)'; this.style.boxShadow='none'">
+                                <i class="fas fa-check-circle" style="color: #27ae60; margin-right: 0.55rem; margin-top: 0.05rem; font-size: 0.75rem; flex-shrink: 0;"></i>
+                                <span id="feature-4" style="font-size: 0.8rem; color: #333; line-height: 1.35; font-weight: 500;">Gateway to Southeast Asia</span>
                             </li>
-                            <li style="margin-bottom: 0; display: flex; align-items: flex-start; padding: 1rem; background: white; border-radius: 8px; transition: transform 0.2s ease, box-shadow 0.2s ease;" onmouseover="this.style.transform='translateX(5px)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='translateX(0)'; this.style.boxShadow='none'">
-                                <i class="fas fa-check-circle" style="color: #27ae60; margin-right: 1rem; margin-top: 0.2rem; font-size: 1.2rem; flex-shrink: 0;"></i>
-                                <span id="feature-5" style="font-size: 1.05rem; color: #333; line-height: 1.6;">Collision of modern urban life and traditional Chinese culture</span>
+                            <li style="display: flex; align-items: flex-start; padding: 0.55rem; background: white; border-radius: 6px; border-left: 3px solid #27ae60; transition: all 0.2s ease;" onmouseover="this.style.transform='translateX(3px)'; this.style.boxShadow='0 4px 12px rgba(39, 174, 96, 0.15)'" onmouseout="this.style.transform='translateX(0)'; this.style.boxShadow='none'">
+                                <i class="fas fa-check-circle" style="color: #27ae60; margin-right: 0.55rem; margin-top: 0.05rem; font-size: 0.75rem; flex-shrink: 0;"></i>
+                                <span id="feature-5" style="font-size: 0.8rem; color: #333; line-height: 1.35; font-weight: 500;">Collision of modern urban life and traditional Chinese culture</span>
                             </li>
                         </ul>
                     </div>
                 </div>
-                
-                <!-- Right Side - Video/Image Section -->
-                <div class="media-section" style="position: sticky; top: 100px;">
-                    <div id="media-container" class="media-container" style="background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%); border-radius: 16px; padding: 3rem; text-align: center; color: white; box-shadow: 0 10px 40px rgba(0,0,0,0.15); position: relative; overflow: hidden;">
-                        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url('data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"100\" height=\"100\" viewBox=\"0 0 100 100\"><rect fill=\"rgba(255,255,255,0.03)\" width=\"50\" height=\"50\"/><rect fill=\"rgba(255,255,255,0.03)\" x=\"50\" y=\"50\" width=\"50\" height=\"50\"/></svg>'); opacity: 0.3;"></div>
-                        <div style="position: relative; z-index: 1;">
-                            <i class="fas fa-play-circle" style="font-size: 5rem; margin-bottom: 1.5rem; opacity: 0.9; cursor: pointer; transition: transform 0.3s ease, opacity 0.3s ease;" onmouseover="this.style.transform='scale(1.1)'; this.style.opacity='1'" onmouseout="this.style.transform='scale(1)'; this.style.opacity='0.9'"></i>
-                            <h3 id="media-title" style="margin-bottom: 1rem; font-size: 1.6rem; font-weight: 600;">Kunming campus tour</h3>
-                            <p id="media-description" style="opacity: 0.9; margin-bottom: 2rem; font-size: 1.1rem; line-height: 1.6;">A video introduction to the Kunming campus</p>
-                            <button style="background: #7A99C7; border: none; color: white; padding: 14px 28px; border-radius: 8px; cursor: pointer; font-size: 1rem; font-weight: 600; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(122, 153, 199, 0.3);" onmouseover="this.style.background='#6A89B7'; this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(122, 153, 199, 0.4)'" onmouseout="this.style.background='#7A99C7'; this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(122, 153, 199, 0.3)'">
-                                <i class="fas fa-play" style="margin-right: 0.5rem;"></i>Play Video
-                            </button>
+            </div>
+            
+            <!-- Video Section - Full Width Below -->
+            <div style="margin-top: 4rem; background: white; border-radius: 16px; padding: 0; box-shadow: 0 4px 20px rgba(0,0,0,0.06); overflow: hidden;">
+                <div id="media-container" class="media-container" style="background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%); border-radius: 0; overflow: hidden; box-shadow: none; position: relative; width: 100%;">
+                    <!-- Video Preview Image -->
+                    <div id="video-preview" style="position: relative; width: 100%; aspect-ratio: 16/9; background: #000; cursor: pointer; overflow: hidden;">
+                        <img id="video-thumbnail" src="assets/Kunming HQ/Cover.jpg" alt="Video Preview" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.7;">
+                        <!-- Play Button Overlay -->
+                        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 2;">
+                            <div style="width: 80px; height: 80px; background: rgba(122, 153, 199, 0.9); border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease; box-shadow: 0 8px 25px rgba(0,0,0,0.3);">
+                                <i class="fas fa-play" style="color: white; font-size: 2rem; margin-left: 4px;"></i>
+                            </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Gallery Section -->
+    <section class="section" style="background-color: #f8f9fa; padding: 80px 0;">
+        <div class="container" style="max-width: 1200px;">
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <span class="section-label" style="display: inline-block; color: #7A99C7; font-weight: 600; letter-spacing: 2px; margin-bottom: 1rem;">GALLERY</span>
+                <h2 class="section-title" style="font-size: 2.5rem; margin-bottom: 0.5rem;">Kunming HQ Campus</h2>
+                <p style="font-size: 1.1rem; color: #666; max-width: 600px; margin: 0 auto;">Take a visual tour of our beautiful campus and facilities</p>
+            </div>
+            
+            <!-- Main Gallery Container -->
+            <div id="kunming-gallery" style="position: relative; background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 15px 50px rgba(0,0,0,0.15);">
+                <!-- Main Image Display -->
+                <div style="position: relative; width: 100%; aspect-ratio: 16/9; background: #000;">
+                    <img id="gallery-main-image" src="" alt="Kunming HQ Campus" style="width: 100%; height: 100%; object-fit: cover; display: block;">
                     
-                    <!-- Quick Info Card -->
-                    <div style="background: white; border-radius: 16px; padding: 2rem; box-shadow: 0 8px 30px rgba(0,0,0,0.08); border: 1px solid #eee; margin-top: 2rem;">
-                        <h4 style="color: #2c3e50; margin-bottom: 1.5rem; font-size: 1.3rem; font-weight: 700; display: flex; align-items: center; gap: 0.5rem;">
-                            <i class="fas fa-info-circle" style="color: #7A99C7;"></i>
-                            Quick Info
-                        </h4>
-                        <div style="display: flex; flex-direction: column; gap: 1rem;">
-                            <div style="display: flex; align-items: center; gap: 1rem;">
-                                <i class="fas fa-map-marker-alt" style="color: #7A99C7; font-size: 1.2rem; width: 24px;"></i>
-                                <span style="color: #666; font-size: 1rem;">City Center Location</span>
-                            </div>
-                            <div style="display: flex; align-items: center; gap: 1rem;">
-                                <i class="fas fa-utensils" style="color: #7A99C7; font-size: 1.2rem; width: 24px;"></i>
-                                <span style="color: #666; font-size: 1rem;">3 Meals Included</span>
-                            </div>
-                            <div style="display: flex; align-items: center; gap: 1rem;">
-                                <i class="fas fa-bed" style="color: #7A99C7; font-size: 1.2rem; width: 24px;"></i>
-                                <span style="color: #666; font-size: 1rem;">Accommodation Provided</span>
-                            </div>
-                            <div style="display: flex; align-items: center; gap: 1rem;">
-                                <i class="fas fa-users" style="color: #7A99C7; font-size: 1.2rem; width: 24px;"></i>
-                                <span style="color: #666; font-size: 1rem;">One-on-One Teaching</span>
-                            </div>
-                        </div>
+                    <!-- Navigation Arrows -->
+                    <button id="gallery-prev" style="position: absolute; left: 20px; top: 50%; transform: translateY(-50%); background: rgba(255,255,255,0.9); border: none; width: 50px; height: 50px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: #7A99C7; transition: all 0.3s ease; z-index: 10; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button id="gallery-next" style="position: absolute; right: 20px; top: 50%; transform: translateY(-50%); background: rgba(255,255,255,0.9); border: none; width: 50px; height: 50px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: #7A99C7; transition: all 0.3s ease; z-index: 10; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                    
+                    <!-- Image Counter -->
+                    <div id="gallery-counter" style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); background: rgba(0,0,0,0.7); color: white; padding: 8px 20px; border-radius: 20px; font-size: 0.9rem; z-index: 10;">
+                        <span id="current-index">1</span> / <span id="total-images">10</span>
                     </div>
+                </div>
+                
+                <!-- Thumbnail Navigation -->
+                <div id="gallery-thumbnails" style="display: flex; gap: 0.5rem; padding: 1rem; background: #f8f9fa; overflow-x: auto; scrollbar-width: thin;">
+                    <!-- Thumbnails will be dynamically loaded -->
                 </div>
             </div>
         </div>
@@ -253,6 +309,222 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             renderFooterLocations();
+            
+            // Load location data and update media section
+            const urlParams = new URLSearchParams(window.location.search);
+            const locationId = urlParams.get('location') || 'kunming';
+            const location = getLocationById(locationId);
+            
+            if (location) {
+                // Update media container with video or image
+                const mediaContainer = document.getElementById('media-container');
+                
+                // Load gallery images for Kunming HQ
+                if (locationId === 'kunming') {
+                    const galleryContainer = document.getElementById('kunming-gallery');
+                    const mainImage = document.getElementById('gallery-main-image');
+                    const thumbnailsContainer = document.getElementById('gallery-thumbnails');
+                    const prevBtn = document.getElementById('gallery-prev');
+                    const nextBtn = document.getElementById('gallery-next');
+                    const currentIndexSpan = document.getElementById('current-index');
+                    const totalImagesSpan = document.getElementById('total-images');
+                    
+                    if (galleryContainer && mainImage && thumbnailsContainer) {
+                        const kunmingImages = [
+                            'assets/Kunming HQ/02.jpg',
+                            'assets/Kunming HQ/03.jpg',
+                            'assets/Kunming HQ/04.jpg',
+                            'assets/Kunming HQ/05.jpg',
+                            'assets/Kunming HQ/06.jpg',
+                            'assets/Kunming HQ/07.jpg',
+                            'assets/Kunming HQ/08.jpg',
+                            'assets/Kunming HQ/09.jpg',
+                            'assets/Kunming HQ/10.jpg',
+                            'assets/Kunming HQ/11.jpg'
+                        ];
+                        
+                        let currentImageIndex = 0;
+                        totalImagesSpan.textContent = kunmingImages.length;
+                        
+                        // Set initial image
+                        mainImage.src = kunmingImages[0];
+                        mainImage.alt = 'Kunming HQ Campus';
+                        
+                        // Create thumbnails
+                        kunmingImages.forEach((imageSrc, index) => {
+                            const thumbnail = document.createElement('div');
+                            thumbnail.style.cssText = 'position: relative; flex-shrink: 0; width: 100px; height: 70px; border-radius: 8px; overflow: hidden; cursor: pointer; border: 3px solid transparent; transition: all 0.3s ease; opacity: 0.6;';
+                            
+                            const thumbImg = document.createElement('img');
+                            thumbImg.src = imageSrc;
+                            thumbImg.style.cssText = 'width: 100%; height: 100%; object-fit: cover; display: block;';
+                            
+                            thumbnail.appendChild(thumbImg);
+                            
+                            // Set first thumbnail as active
+                            if (index === 0) {
+                                thumbnail.style.borderColor = '#7A99C7';
+                                thumbnail.style.opacity = '1';
+                            }
+                            
+                            // Click thumbnail to switch image
+                            thumbnail.addEventListener('click', function() {
+                                currentImageIndex = index;
+                                mainImage.src = imageSrc;
+                                updateThumbnails();
+                                updateCounter();
+                            });
+                            
+                            thumbnailsContainer.appendChild(thumbnail);
+                        });
+                        
+                        // Update thumbnails active state
+                        function updateThumbnails() {
+                            const thumbnails = thumbnailsContainer.querySelectorAll('div');
+                            thumbnails.forEach((thumb, index) => {
+                                if (index === currentImageIndex) {
+                                    thumb.style.borderColor = '#7A99C7';
+                                    thumb.style.opacity = '1';
+                                } else {
+                                    thumb.style.borderColor = 'transparent';
+                                    thumb.style.opacity = '0.6';
+                                }
+                            });
+                        }
+                        
+                        // Update counter
+                        function updateCounter() {
+                            currentIndexSpan.textContent = currentImageIndex + 1;
+                        }
+                        
+                        // Navigation functions
+                        function showNextImage() {
+                            currentImageIndex = (currentImageIndex + 1) % kunmingImages.length;
+                            mainImage.src = kunmingImages[currentImageIndex];
+                            updateThumbnails();
+                            updateCounter();
+                        }
+                        
+                        function showPrevImage() {
+                            currentImageIndex = (currentImageIndex - 1 + kunmingImages.length) % kunmingImages.length;
+                            mainImage.src = kunmingImages[currentImageIndex];
+                            updateThumbnails();
+                            updateCounter();
+                        }
+                        
+                        // Button events
+                        if (nextBtn) {
+                            nextBtn.addEventListener('click', showNextImage);
+                            nextBtn.addEventListener('mouseenter', function() {
+                                this.style.background = '#7A99C7';
+                                this.style.color = 'white';
+                                this.style.transform = 'translateY(-50%) scale(1.1)';
+                            });
+                            nextBtn.addEventListener('mouseleave', function() {
+                                this.style.background = 'rgba(255,255,255,0.9)';
+                                this.style.color = '#7A99C7';
+                                this.style.transform = 'translateY(-50%) scale(1)';
+                            });
+                        }
+                        
+                        if (prevBtn) {
+                            prevBtn.addEventListener('click', showPrevImage);
+                            prevBtn.addEventListener('mouseenter', function() {
+                                this.style.background = '#7A99C7';
+                                this.style.color = 'white';
+                                this.style.transform = 'translateY(-50%) scale(1.1)';
+                            });
+                            prevBtn.addEventListener('mouseleave', function() {
+                                this.style.background = 'rgba(255,255,255,0.9)';
+                                this.style.color = '#7A99C7';
+                                this.style.transform = 'translateY(-50%) scale(1)';
+                            });
+                        }
+                        
+                        // Keyboard navigation
+                        document.addEventListener('keydown', function(e) {
+                            if (e.key === 'ArrowLeft') showPrevImage();
+                            if (e.key === 'ArrowRight') showNextImage();
+                        });
+                        
+                        // Auto-play (optional, can be disabled)
+                        // let autoPlayInterval = setInterval(showNextImage, 5000);
+                        // galleryContainer.addEventListener('mouseenter', () => clearInterval(autoPlayInterval));
+                        // galleryContainer.addEventListener('mouseleave', () => {
+                        //     autoPlayInterval = setInterval(showNextImage, 5000);
+                        // });
+                    }
+                } else {
+                    // Hide gallery for other locations
+                    const gallerySection = document.querySelector('#kunming-gallery')?.closest('section');
+                    if (gallerySection) gallerySection.style.display = 'none';
+                }
+                
+                // Add video player functionality - play in place
+                function playVideo() {
+                    if (!location.video) return;
+                    
+                    const videoPreview = document.getElementById('video-preview');
+                    if (!videoPreview) return;
+                    
+                    // Replace preview content with video player
+                    videoPreview.innerHTML = '';
+                    videoPreview.style.cursor = 'default';
+                    
+                    const video = document.createElement('video');
+                    video.src = location.video;
+                    video.controls = true;
+                    video.autoplay = true;
+                    video.playsInline = true;
+                    video.style.cssText = 'width: 100%; height: 100%; object-fit: cover; display: block;';
+                    
+                    videoPreview.appendChild(video);
+                }
+                
+                // Setup video preview and play functionality
+                const videoPreview = document.getElementById('video-preview');
+                const videoThumbnail = document.getElementById('video-thumbnail');
+                
+                if (location.video) {
+                    // Set thumbnail if available
+                    if (videoThumbnail && location.image) {
+                        videoThumbnail.src = location.image;
+                    }
+                    
+                    // Make preview clickable
+                    if (videoPreview) {
+                        videoPreview.addEventListener('click', playVideo);
+                        videoPreview.addEventListener('mouseenter', function() {
+                            const playOverlay = this.querySelector('div > div');
+                            if (playOverlay) {
+                                playOverlay.style.background = 'rgba(122, 153, 199, 1)';
+                                playOverlay.style.transform = 'translate(-50%, -50%) scale(1.1)';
+                            }
+                            if (videoThumbnail) videoThumbnail.style.opacity = '0.8';
+                        });
+                        videoPreview.addEventListener('mouseleave', function() {
+                            const playOverlay = this.querySelector('div > div');
+                            if (playOverlay) {
+                                playOverlay.style.background = 'rgba(122, 153, 199, 0.9)';
+                                playOverlay.style.transform = 'translate(-50%, -50%) scale(1)';
+                            }
+                            if (videoThumbnail) videoThumbnail.style.opacity = '0.7';
+                        });
+                    }
+                } else if (location.image && !location.video) {
+                    // If no video, show image instead
+                    if (videoPreview) {
+                        videoPreview.style.cursor = 'default';
+                        if (videoThumbnail) {
+                            videoThumbnail.src = location.image;
+                            videoThumbnail.style.opacity = '1';
+                        }
+                        // Hide play overlay
+                        const playOverlay = videoPreview.querySelector('div');
+                        if (playOverlay) playOverlay.style.display = 'none';
+                    }
+                }
+            }
         });
     </script>
     <script>

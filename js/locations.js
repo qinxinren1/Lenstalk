@@ -8,7 +8,8 @@ const LOCATIONS_DATA = [
         shortTitle: 'Kunming HQ',
         description: 'Main campus with full facilities',
         fullDescription: 'Kunming, the "City of Eternal Spring" with pleasant climate and beautiful scenery, offers the perfect environment for learning Chinese while experiencing the collision of modern urban life and traditional Chinese culture.',
-        image: 'assets/locations/kunming.jpg',
+        image: 'assets/Kunming HQ/Cover.jpg',
+        video: 'assets/Kunming HQ/01 video.mp4',
         gradient: 'linear-gradient(135deg, rgba(102, 204, 255, 0.25), rgba(0, 102, 204, 0.25))',
         videoTitle: 'Kunming HQ campus tour',
         videoDescription: 'Experience our Kunming headquarters and discover your new campus.',
@@ -347,6 +348,7 @@ const LOCATIONS_DATA = [
         description: 'Ancient tea horse road town',
         fullDescription: 'Shaxi is a well-preserved ancient town on the Tea Horse Road, offering a unique blend of history, culture, and natural beauty for immersive Chinese learning.',
         image: 'assets/shaxi/cover.jpg',
+        video: null,
         gradient: 'linear-gradient(135deg, rgba(183, 149, 11, 0.25), rgba(230, 126, 34, 0.25))',
         videoTitle: 'Shaxi ancient town experience',
         videoDescription: 'Discover the charm of learning Chinese in historic Shaxi.',
@@ -521,7 +523,9 @@ function renderLocationCards(containerId, options = {}) {
         ? LOCATIONS_DATA.filter(loc => locationIds.includes(loc.id))
         : LOCATIONS_DATA;
     
-    container.innerHTML = '';
+    // Preserve existing content (like Online Program card) by only clearing location cards
+    const existingCards = container.querySelectorAll('.location-card');
+    existingCards.forEach(card => card.remove());
     
     locationsToShow.forEach(location => {
         const card = document.createElement('a');
@@ -559,22 +563,25 @@ function renderLocationCards(containerId, options = {}) {
         } else {
             card.style.cssText = `
                 background: white; 
-                border: 1px solid #e1e8ed; 
-                border-radius: 12px; 
-                padding: 1.5rem; 
+                border: 2px solid #e1e8ed; 
+                border-radius: 16px; 
+                padding: 2rem; 
                 text-decoration: none; 
                 color: #2c3e50; 
                 transition: all 0.3s ease;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+                display: flex;
+                flex-direction: column;
             `;
         }
         
         const title = document.createElement('h4');
         title.textContent = location.shortTitle || location.title;
-        title.style.cssText = 'margin-bottom: 0.5rem; color: #2c3e50;';
+        title.style.cssText = 'margin-bottom: 0.75rem; color: #2c3e50; font-size: 1.25rem; font-weight: 600;';
         
         const desc = document.createElement('p');
         desc.textContent = location.description;
-        desc.style.cssText = 'color: #666; font-size: 0.9rem;';
+        desc.style.cssText = 'color: #666; font-size: 0.95rem; line-height: 1.6; margin: 0;';
         
         card.appendChild(title);
         card.appendChild(desc);
@@ -585,16 +592,16 @@ function renderLocationCards(containerId, options = {}) {
     const cards = container.querySelectorAll('.location-card');
     cards.forEach(card => {
         card.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateY(-3px)';
-            this.style.boxShadow = '0 4px 12px rgba(0,0,0,0.15)';
+            this.style.transform = 'translateY(-6px)';
+            this.style.boxShadow = cardStyle === 'scroll' ? '0 4px 12px rgba(0,0,0,0.15)' : '0 12px 28px rgba(0,0,0,0.12)';
             if (cardStyle === 'grid') {
-                this.style.borderColor = '#e74c3c';
+                this.style.borderColor = '#7A99C7';
             }
         });
         
         card.addEventListener('mouseleave', function() {
             this.style.transform = 'translateY(0)';
-            this.style.boxShadow = cardStyle === 'scroll' ? '0 2px 8px rgba(0,0,0,0.1)' : '';
+            this.style.boxShadow = cardStyle === 'scroll' ? '0 2px 8px rgba(0,0,0,0.1)' : '0 4px 12px rgba(0,0,0,0.06)';
             if (cardStyle === 'grid') {
                 this.style.borderColor = '#e1e8ed';
             }

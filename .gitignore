@@ -70,4 +70,5 @@ logs
 *.temp
 
 # Media not tracked in git history
-assets/shaxi/*.mp4
+assets/shaxi/*.mp4*.mp4
+assets/Kunming HQ/01 video.mp4

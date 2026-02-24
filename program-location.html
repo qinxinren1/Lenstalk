@@ -48,11 +48,23 @@
             <div style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 3rem; align-items: stretch; min-height: 600px;">
                 <!-- Left Side - Video Section -->
                 <div class="video-section" style="display: flex; flex-direction: column;">
-                    <div id="video-container" class="video-container" style="background: #2c3e50; border-radius: 12px; padding: 3rem; text-align: center; color: white; flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; margin-bottom: 2rem; min-height: 450px;">
-                        <i class="fas fa-play-circle" style="font-size: 5rem; margin-bottom: 1.5rem; opacity: 0.7;"></i>
-                        <h3 id="video-title" style="margin-bottom: 1rem; font-size: 1.5rem;">Location Video</h3>
-                        <p id="video-description" style="opacity: 0.8; margin-bottom: 1.5rem; font-size: 1.1rem;">Watch a video about this location</p>
-                        <button style="background: #7A99C7; border: none; color: white; padding: 12px 24px; border-radius: 6px; cursor: pointer; font-size: 1rem;">Play Video</button>
+                    <div id="video-container" class="video-container" style="background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%); border-radius: 12px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.15); margin-bottom: 2rem;">
+                        <!-- Video Preview Image -->
+                        <div id="video-preview" style="position: relative; width: 100%; aspect-ratio: 16/9; background: #000; cursor: pointer; overflow: hidden;">
+                            <img id="video-thumbnail" src="" alt="Video Preview" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.7;">
+                            <!-- Play Button Overlay -->
+                            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 2;">
+                                <div style="width: 80px; height: 80px; background: rgba(122, 153, 199, 0.9); border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease; box-shadow: 0 8px 25px rgba(0,0,0,0.3);">
+                                    <i class="fas fa-play" style="color: white; font-size: 2rem; margin-left: 4px;"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Video Info -->
+                        <div style="padding: 1.5rem; text-align: center; color: white;">
+                            <h3 id="video-title" style="margin-bottom: 0.5rem; font-size: 1.4rem; font-weight: 600;">Location Video</h3>
+                            <p id="video-description" style="opacity: 0.9; margin-bottom: 1rem; font-size: 0.95rem; line-height: 1.5;">Watch a video about this location</p>
+                            <button id="play-video-btn" style="background: #7A99C7; border: none; color: white; padding: 12px 24px; border-radius: 8px; cursor: pointer; font-size: 0.95rem; font-weight: 600; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(122, 153, 199, 0.3);">Play Video</button>
+                        </div>
                     </div>
                     
                     <!-- Location Navigation Buttons -->
@@ -121,6 +133,43 @@
                         <a id="pricing-cta" href="apply.html" class="btn btn-primary" style="background: white; color: #667eea; border: none; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 600;">Apply now</a>
                     </div>
                 </section>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Gallery Section -->
+    <section class="section" style="background-color: #f8f9fa; padding: 80px 0; display: none;" id="gallery-section">
+        <div class="container" style="max-width: 1200px;">
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <span class="section-label" style="display: inline-block; color: #7A99C7; font-weight: 600; letter-spacing: 2px; margin-bottom: 1rem;">GALLERY</span>
+                <h2 class="section-title" style="font-size: 2.5rem; margin-bottom: 0.5rem;" id="gallery-title">Campus Gallery</h2>
+                <p style="font-size: 1.1rem; color: #666; max-width: 600px; margin: 0 auto;">Take a visual tour of our beautiful campus and facilities</p>
+            </div>
+            
+            <!-- Main Gallery Container -->
+            <div id="location-gallery" style="position: relative; background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 15px 50px rgba(0,0,0,0.15);">
+                <!-- Main Image Display -->
+                <div style="position: relative; width: 100%; aspect-ratio: 16/9; background: #000;">
+                    <img id="gallery-main-image" src="" alt="Campus Gallery" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                    
+                    <!-- Navigation Arrows -->
+                    <button id="gallery-prev" style="position: absolute; left: 20px; top: 50%; transform: translateY(-50%); background: rgba(255,255,255,0.9); border: none; width: 50px; height: 50px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: #7A99C7; transition: all 0.3s ease; z-index: 10; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button id="gallery-next" style="position: absolute; right: 20px; top: 50%; transform: translateY(-50%); background: rgba(255,255,255,0.9); border: none; width: 50px; height: 50px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: #7A99C7; transition: all 0.3s ease; z-index: 10; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                    
+                    <!-- Image Counter -->
+                    <div id="gallery-counter" style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); background: rgba(0,0,0,0.7); color: white; padding: 8px 20px; border-radius: 20px; font-size: 0.9rem; z-index: 10;">
+                        <span id="current-index">1</span> / <span id="total-images">10</span>
+                    </div>
+                </div>
+                
+                <!-- Thumbnail Navigation -->
+                <div id="gallery-thumbnails" style="display: flex; gap: 0.5rem; padding: 1rem; background: #f8f9fa; overflow-x: auto; scrollbar-width: thin;">
+                    <!-- Thumbnails will be dynamically loaded -->
+                </div>
             </div>
         </div>
     </section>
@@ -250,14 +299,278 @@
             // Render footer locations
             renderFooterLocations();
         });
+        
+        // Function to load gallery images
+        function loadGalleryImages(locationId) {
+            const gallerySection = document.getElementById('gallery-section');
+            const galleryContainer = document.getElementById('location-gallery');
+            const galleryTitle = document.getElementById('gallery-title');
+            const mainImage = document.getElementById('gallery-main-image');
+            const thumbnailsContainer = document.getElementById('gallery-thumbnails');
+            const prevBtn = document.getElementById('gallery-prev');
+            const nextBtn = document.getElementById('gallery-next');
+            const currentIndexSpan = document.getElementById('current-index');
+            const totalImagesSpan = document.getElementById('total-images');
+            
+            if (!galleryContainer || !mainImage || !thumbnailsContainer) return;
+            
+            // Clear existing thumbnails
+            thumbnailsContainer.innerHTML = '';
+            
+            // Only show gallery for Kunming HQ
+            if (locationId === 'kunming') {
+                if (gallerySection) gallerySection.style.display = 'block';
+                if (galleryTitle) galleryTitle.textContent = 'Kunming HQ Campus Gallery';
+                
+                const kunmingImages = [
+                    'assets/Kunming HQ/02.jpg',
+                    'assets/Kunming HQ/03.jpg',
+                    'assets/Kunming HQ/04.jpg',
+                    'assets/Kunming HQ/05.jpg',
+                    'assets/Kunming HQ/06.jpg',
+                    'assets/Kunming HQ/07.jpg',
+                    'assets/Kunming HQ/08.jpg',
+                    'assets/Kunming HQ/09.jpg',
+                    'assets/Kunming HQ/10.jpg',
+                    'assets/Kunming HQ/11.jpg'
+                ];
+                
+                let currentImageIndex = 0;
+                totalImagesSpan.textContent = kunmingImages.length;
+                
+                // Set initial image
+                mainImage.src = kunmingImages[0];
+                mainImage.alt = 'Kunming HQ Campus';
+                
+                // Create thumbnails
+                kunmingImages.forEach((imageSrc, index) => {
+                    const thumbnail = document.createElement('div');
+                    thumbnail.style.cssText = 'position: relative; flex-shrink: 0; width: 100px; height: 70px; border-radius: 8px; overflow: hidden; cursor: pointer; border: 3px solid transparent; transition: all 0.3s ease; opacity: 0.6;';
+                    
+                    const thumbImg = document.createElement('img');
+                    thumbImg.src = imageSrc;
+                    thumbImg.style.cssText = 'width: 100%; height: 100%; object-fit: cover; display: block;';
+                    
+                    thumbnail.appendChild(thumbImg);
+                    
+                    // Set first thumbnail as active
+                    if (index === 0) {
+                        thumbnail.style.borderColor = '#7A99C7';
+                        thumbnail.style.opacity = '1';
+                    }
+                    
+                    // Click thumbnail to switch image
+                    thumbnail.addEventListener('click', function() {
+                        currentImageIndex = index;
+                        mainImage.src = imageSrc;
+                        updateThumbnails();
+                        updateCounter();
+                    });
+                    
+                    thumbnailsContainer.appendChild(thumbnail);
+                });
+                
+                // Update thumbnails active state
+                function updateThumbnails() {
+                    const thumbnails = thumbnailsContainer.querySelectorAll('div');
+                    thumbnails.forEach((thumb, index) => {
+                        if (index === currentImageIndex) {
+                            thumb.style.borderColor = '#7A99C7';
+                            thumb.style.opacity = '1';
+                        } else {
+                            thumb.style.borderColor = 'transparent';
+                            thumb.style.opacity = '0.6';
+                        }
+                    });
+                }
+                
+                // Update counter
+                function updateCounter() {
+                    currentIndexSpan.textContent = currentImageIndex + 1;
+                }
+                
+                // Navigation functions
+                function showNextImage() {
+                    currentImageIndex = (currentImageIndex + 1) % kunmingImages.length;
+                    mainImage.src = kunmingImages[currentImageIndex];
+                    updateThumbnails();
+                    updateCounter();
+                }
+                
+                function showPrevImage() {
+                    currentImageIndex = (currentImageIndex - 1 + kunmingImages.length) % kunmingImages.length;
+                    mainImage.src = kunmingImages[currentImageIndex];
+                    updateThumbnails();
+                    updateCounter();
+                }
+                
+                // Button events
+                if (nextBtn) {
+                    nextBtn.onclick = showNextImage;
+                    nextBtn.addEventListener('mouseenter', function() {
+                        this.style.background = '#7A99C7';
+                        this.style.color = 'white';
+                        this.style.transform = 'translateY(-50%) scale(1.1)';
+                    });
+                    nextBtn.addEventListener('mouseleave', function() {
+                        this.style.background = 'rgba(255,255,255,0.9)';
+                        this.style.color = '#7A99C7';
+                        this.style.transform = 'translateY(-50%) scale(1)';
+                    });
+                }
+                
+                if (prevBtn) {
+                    prevBtn.onclick = showPrevImage;
+                    prevBtn.addEventListener('mouseenter', function() {
+                        this.style.background = '#7A99C7';
+                        this.style.color = 'white';
+                        this.style.transform = 'translateY(-50%) scale(1.1)';
+                    });
+                    prevBtn.addEventListener('mouseleave', function() {
+                        this.style.background = 'rgba(255,255,255,0.9)';
+                        this.style.color = '#7A99C7';
+                        this.style.transform = 'translateY(-50%) scale(1)';
+                    });
+                }
+                
+                // Keyboard navigation
+                document.addEventListener('keydown', function(e) {
+                    if (gallerySection.style.display === 'block') {
+                        if (e.key === 'ArrowLeft') showPrevImage();
+                        if (e.key === 'ArrowRight') showNextImage();
+                    }
+                });
+            } else {
+                if (gallerySection) gallerySection.style.display = 'none';
+            }
+        }
 
         function switchLocation(locationId) {
             const location = locations.find(loc => loc.id === locationId);
             if (!location) return;
 
+            // Load gallery images
+            loadGalleryImages(locationId);
+
             // Update video section
-            document.getElementById('video-title').textContent = location.videoTitle || 'Location video';
-            document.getElementById('video-description').textContent = location.videoDescription || 'Discover this location.';
+            const videoContainer = document.getElementById('video-container');
+            const videoTitle = document.getElementById('video-title');
+            const videoDescription = document.getElementById('video-description');
+            const videoPreview = document.getElementById('video-preview');
+            const videoThumbnail = document.getElementById('video-thumbnail');
+            const playVideoBtn = document.getElementById('play-video-btn');
+            
+            if (videoTitle) videoTitle.textContent = location.videoTitle || 'Location video';
+            if (videoDescription) videoDescription.textContent = location.videoDescription || 'Discover this location.';
+            
+            // Add video player functionality
+            function playVideo() {
+                if (!location.video) return;
+                
+                // Create video modal
+                const videoModal = document.createElement('div');
+                videoModal.style.cssText = 'position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); z-index: 9999; display: flex; align-items: center; justify-content: center; padding: 2rem;';
+                
+                const videoWrapper = document.createElement('div');
+                videoWrapper.style.cssText = 'position: relative; width: 100%; max-width: 1200px; background: #000; border-radius: 12px; overflow: hidden;';
+                
+                const video = document.createElement('video');
+                video.src = location.video;
+                video.controls = true;
+                video.autoplay = true;
+                video.playsInline = true;
+                video.style.cssText = 'width: 100%; height: auto; display: block;';
+                
+                const closeBtn = document.createElement('button');
+                closeBtn.innerHTML = '&times;';
+                closeBtn.style.cssText = 'position: absolute; top: 15px; right: 15px; background: rgba(0,0,0,0.7); border: none; color: white; font-size: 2.5rem; cursor: pointer; line-height: 1; width: 45px; height: 45px; border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 10000; transition: all 0.3s ease;';
+                closeBtn.addEventListener('mouseenter', function() {
+                    this.style.background = 'rgba(255,255,255,0.9)';
+                    this.style.color = '#000';
+                });
+                closeBtn.addEventListener('mouseleave', function() {
+                    this.style.background = 'rgba(0,0,0,0.7)';
+                    this.style.color = 'white';
+                });
+                
+                function closeVideo() {
+                    video.pause();
+                    video.src = '';
+                    if (document.body.contains(videoModal)) {
+                        document.body.removeChild(videoModal);
+                    }
+                }
+                
+                closeBtn.addEventListener('click', closeVideo);
+                
+                videoWrapper.appendChild(video);
+                videoWrapper.appendChild(closeBtn);
+                videoModal.appendChild(videoWrapper);
+                document.body.appendChild(videoModal);
+                
+                // Close on click outside
+                videoModal.addEventListener('click', function(e) {
+                    if (e.target === videoModal) {
+                        closeVideo();
+                    }
+                });
+                
+                // Close on Escape key
+                function handleEscape(e) {
+                    if (e.key === 'Escape') {
+                        closeVideo();
+                        document.removeEventListener('keydown', handleEscape);
+                    }
+                }
+                document.addEventListener('keydown', handleEscape);
+            }
+            
+            // Setup video preview
+            if (location.video) {
+                // Set thumbnail if available
+                if (videoThumbnail && location.image) {
+                    videoThumbnail.src = location.image;
+                }
+                
+                // Make preview clickable
+                if (videoPreview) {
+                    videoPreview.addEventListener('click', playVideo);
+                    videoPreview.addEventListener('mouseenter', function() {
+                        const playOverlay = this.querySelector('div > div');
+                        if (playOverlay) {
+                            playOverlay.style.background = 'rgba(122, 153, 199, 1)';
+                            playOverlay.style.transform = 'translate(-50%, -50%) scale(1.1)';
+                        }
+                        if (videoThumbnail) videoThumbnail.style.opacity = '0.8';
+                    });
+                    videoPreview.addEventListener('mouseleave', function() {
+                        const playOverlay = this.querySelector('div > div');
+                        if (playOverlay) {
+                            playOverlay.style.background = 'rgba(122, 153, 199, 0.9)';
+                            playOverlay.style.transform = 'translate(-50%, -50%) scale(1)';
+                        }
+                        if (videoThumbnail) videoThumbnail.style.opacity = '0.7';
+                    });
+                }
+                
+                // Play button
+                if (playVideoBtn) {
+                    playVideoBtn.addEventListener('click', playVideo);
+                }
+            } else if (location.image && !location.video) {
+                // If no video, show image instead
+                if (videoPreview) {
+                    videoPreview.style.cursor = 'default';
+                    if (videoThumbnail) {
+                        videoThumbnail.src = location.image;
+                        videoThumbnail.style.opacity = '1';
+                    }
+                    // Hide play overlay
+                    const playOverlay = videoPreview.querySelector('div');
+                    if (playOverlay) playOverlay.style.display = 'none';
+                }
+                if (playVideoBtn) playVideoBtn.style.display = 'none';
+            }
 
             // Update summary
             document.getElementById('location-title').textContent = location.title;

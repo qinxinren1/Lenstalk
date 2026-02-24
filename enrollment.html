@@ -8,6 +8,70 @@
     <link rel="stylesheet" href="css/responsive.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* FAQ Styles */
+        #faq-section .container {
+            max-width: 1000px !important;
+            padding: 0 20px !important;
+        }
+        #faq-section > .container > div:last-child {
+            max-width: none !important;
+            width: 100% !important;
+        }
+        .faq-item {
+            width: 100% !important;
+            box-sizing: border-box !important;
+            max-width: none !important;
+        }
+        .faq-question {
+            box-sizing: border-box !important;
+            width: 100% !important;
+        }
+        .faq-answer {
+            box-sizing: border-box !important;
+            width: 100% !important;
+        }
+        .faq-item:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.12) !important;
+            border-color: #7A99C7 !important;
+        }
+        .faq-question:hover {
+            color: #7A99C7 !important;
+        }
+        .faq-item.active {
+            border-color: #7A99C7 !important;
+            box-shadow: 0 4px 16px rgba(122, 153, 199, 0.2) !important;
+        }
+        
+        /* Enrollment Page Specific Responsive Styles */
+        @media (max-width: 968px) {
+            #enrollment-title {
+                font-size: clamp(2.5rem, 8vw, 4rem) !important;
+                font-weight: 700 !important;
+            }
+            #enrollment-subtitle {
+                font-size: clamp(1rem, 2.5vw, 1.2rem) !important;
+            }
+        }
+        @media (max-width: 768px) {
+            #enrollment-title {
+                font-size: clamp(2.2rem, 7vw, 3.2rem) !important;
+                font-weight: 700 !important;
+            }
+            #enrollment-subtitle {
+                font-size: clamp(0.95rem, 2.2vw, 1.1rem) !important;
+            }
+        }
+        @media (max-width: 480px) {
+            #enrollment-title {
+                font-size: clamp(1.8rem, 6vw, 2.5rem) !important;
+                font-weight: 700 !important;
+            }
+            #enrollment-subtitle {
+                font-size: clamp(0.9rem, 2vw, 1rem) !important;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
@@ -28,11 +92,14 @@
     </nav>
 
     <!-- Page Header -->
-    <section class="hero" style="padding: 120px 0 60px;">
-        <div class="container">
-            <div style="text-align: center; color: white;">
-                <h1 style="font-size: 3rem; margin-bottom: 1rem;">Enrollment Process</h1>
-                <p style="font-size: 1.2rem; opacity: 0.9;">Your journey to learning Chinese starts here</p>
+    <section class="hero" style="padding: 120px 0 80px; background: linear-gradient(135deg, #5B7DB8 0%, #7A99C7 50%, #8AB3D9 100%); position: relative; overflow: hidden;">
+        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(circle at 20% 50%, rgba(122, 153, 199, 0.4) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(90, 125, 184, 0.3) 0%, transparent 50%); opacity: 0.7;"></div>
+        <div class="container" style="position: relative; z-index: 2;">
+            <div style="text-align: center; color: white; max-width: 900px; margin: 0 auto;">
+                <h1 id="enrollment-title" style="font-size: clamp(3rem, 7vw, 5.5rem); font-weight: 700; margin-bottom: 0.5rem; line-height: 1.1; text-shadow: 0 4px 20px rgba(0,0,0,0.4), 0 2px 10px rgba(0,0,0,0.2); letter-spacing: -0.03em; opacity: 1; font-family: 'Inter', sans-serif;">Enrollment Process</h1>
+                <p id="enrollment-subtitle" style="font-size: clamp(1.1rem, 2.2vw, 1.4rem); line-height: 1.7; opacity: 0.92; margin-bottom: 2rem; text-shadow: 0 2px 8px rgba(0,0,0,0.3); font-weight: 400; max-width: 650px; margin-left: auto; margin-right: auto; font-family: 'Inter', sans-serif; letter-spacing: 0.01em;">
+                    Your journey to learning Chinese starts here
+                </p>
             </div>
         </div>
     </section>
@@ -108,95 +175,95 @@
 
     <!-- FAQ Section -->
     <section id="faq-section" class="section">
-        <div class="container">
+        <div class="container" style="max-width: 1200px;">
             <h2 class="section-title">Frequently Asked Questions</h2>
-            <div style="max-width: 800px; margin: 0 auto; margin-top: 2rem;">
-                <div class="faq-item" style="background: white; margin-bottom: 1rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); overflow: hidden;">
-                    <button class="faq-question" style="width: 100%; padding: 1.5rem; border: none; background: none; text-align: left; cursor: pointer; font-size: 1.1rem; font-weight: 600; color: #333; display: flex; justify-content: space-between; align-items: center;">
+            <div style="width: 100%; margin: 0 auto; margin-top: 2rem; padding: 0;">
+                <div class="faq-item" style="background: white; margin-bottom: 1rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); border: 1px solid #e8ecef; overflow: hidden; transition: all 0.3s ease;">
+                    <button class="faq-question" style="width: 100%; padding: 1.25rem 1.5rem; border: none; background: none; text-align: left; cursor: pointer; font-size: 1rem; font-weight: 600; color: #2c3e50; display: flex; justify-content: space-between; align-items: center; transition: all 0.3s ease;">
                         <span>What type of visa do I need?</span>
-                        <i class="fas fa-chevron-down faq-icon" style="transition: transform 0.3s ease;"></i>
+                        <i class="fas fa-chevron-down faq-icon" style="transition: transform 0.3s ease; color: #7A99C7; font-size: 0.9rem;"></i>
                     </button>
-                    <div class="faq-answer" style="padding: 0 1.5rem 1.5rem; color: #666; line-height: 1.6; display: none;">
+                    <div class="faq-answer" style="padding: 0 1.5rem 1.25rem; color: #555; line-height: 1.7; display: none; font-size: 0.95rem;">
                         You can choose to obtain a tourist visa to visit China. At present, China offers visa-free access to some countries. Please consult the local visa office in advance to determine if a visa is required.
                     </div>
                 </div>
 
-                <div class="faq-item" style="background: white; margin-bottom: 1rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); overflow: hidden;">
-                    <button class="faq-question" style="width: 100%; padding: 1.5rem; border: none; background: none; text-align: left; cursor: pointer; font-size: 1.1rem; font-weight: 600; color: #333; display: flex; justify-content: space-between; align-items: center;">
+                <div class="faq-item" style="background: white; margin-bottom: 1rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); border: 1px solid #e8ecef; overflow: hidden; transition: all 0.3s ease;">
+                    <button class="faq-question" style="width: 100%; padding: 1.25rem 1.5rem; border: none; background: none; text-align: left; cursor: pointer; font-size: 1rem; font-weight: 600; color: #2c3e50; display: flex; justify-content: space-between; align-items: center; transition: all 0.3s ease;">
                         <span>Can I work while studying?</span>
-                        <i class="fas fa-chevron-down faq-icon" style="transition: transform 0.3s ease;"></i>
+                        <i class="fas fa-chevron-down faq-icon" style="transition: transform 0.3s ease; color: #7A99C7; font-size: 0.9rem;"></i>
                     </button>
-                    <div class="faq-answer" style="padding: 0 1.5rem 1.5rem; color: #666; line-height: 1.6; display: none;">
+                    <div class="faq-answer" style="padding: 0 1.5rem 1.25rem; color: #555; line-height: 1.7; display: none; font-size: 0.95rem;">
                         Using a tourist visa does not permit working in China.
                     </div>
                 </div>
 
-                <div class="faq-item" style="background: white; margin-bottom: 1rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); overflow: hidden;">
-                    <button class="faq-question" style="width: 100%; padding: 1.5rem; border: none; background: none; text-align: left; cursor: pointer; font-size: 1.1rem; font-weight: 600; color: #333; display: flex; justify-content: space-between; align-items: center;">
+                <div class="faq-item" style="background: white; margin-bottom: 1rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); border: 1px solid #e8ecef; overflow: hidden; transition: all 0.3s ease;">
+                    <button class="faq-question" style="width: 100%; padding: 1.25rem 1.5rem; border: none; background: none; text-align: left; cursor: pointer; font-size: 1rem; font-weight: 600; color: #2c3e50; display: flex; justify-content: space-between; align-items: center; transition: all 0.3s ease;">
                         <span>What if I need to cancel my enrollment?</span>
-                        <i class="fas fa-chevron-down faq-icon" style="transition: transform 0.3s ease;"></i>
+                        <i class="fas fa-chevron-down faq-icon" style="transition: transform 0.3s ease; color: #7A99C7; font-size: 0.9rem;"></i>
                     </button>
-                    <div class="faq-answer" style="padding: 0 1.5rem 1.5rem; color: #666; line-height: 1.6; display: none;">
+                    <div class="faq-answer" style="padding: 0 1.5rem 1.25rem; color: #555; line-height: 1.7; display: none; font-size: 0.95rem;">
                         Canceling the application will not allow you to get a refund of the deposit. However, we will keep your application slot for you and wait for your next application. Any cancellation due to personal reasons cannot be refunded. In case of an emergency and you need to stop your studies halfway, we will retain your course fees and wait for you to come back and continue your studies in the future.
                     </div>
                 </div>
 
-                <div class="faq-item" style="background: white; margin-bottom: 1rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); overflow: hidden;">
-                    <button class="faq-question" style="width: 100%; padding: 1.5rem; border: none; background: none; text-align: left; cursor: pointer; font-size: 1.1rem; font-weight: 600; color: #333; display: flex; justify-content: space-between; align-items: center;">
+                <div class="faq-item" style="background: white; margin-bottom: 1rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); border: 1px solid #e8ecef; overflow: hidden; transition: all 0.3s ease;">
+                    <button class="faq-question" style="width: 100%; padding: 1.25rem 1.5rem; border: none; background: none; text-align: left; cursor: pointer; font-size: 1rem; font-weight: 600; color: #2c3e50; display: flex; justify-content: space-between; align-items: center; transition: all 0.3s ease;">
                         <span>Will there be a pick-up service?</span>
-                        <i class="fas fa-chevron-down faq-icon" style="transition: transform 0.3s ease;"></i>
+                        <i class="fas fa-chevron-down faq-icon" style="transition: transform 0.3s ease; color: #7A99C7; font-size: 0.9rem;"></i>
                     </button>
-                    <div class="faq-answer" style="padding: 0 1.5rem 1.5rem; color: #666; line-height: 1.6; display: none;">
+                    <div class="faq-answer" style="padding: 0 1.5rem 1.25rem; color: #555; line-height: 1.7; display: none; font-size: 0.95rem;">
                         We will offer airport pick-up and drop-off services. The service fee has been included in your course fee.
                     </div>
                 </div>
 
-                <div class="faq-item" style="background: white; margin-bottom: 1rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); overflow: hidden;">
-                    <button class="faq-question" style="width: 100%; padding: 1.5rem; border: none; background: none; text-align: left; cursor: pointer; font-size: 1.1rem; font-weight: 600; color: #333; display: flex; justify-content: space-between; align-items: center;">
+                <div class="faq-item" style="background: white; margin-bottom: 1rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); border: 1px solid #e8ecef; overflow: hidden; transition: all 0.3s ease;">
+                    <button class="faq-question" style="width: 100%; padding: 1.25rem 1.5rem; border: none; background: none; text-align: left; cursor: pointer; font-size: 1rem; font-weight: 600; color: #2c3e50; display: flex; justify-content: space-between; align-items: center; transition: all 0.3s ease;">
                         <span>I'm a vegetarian. Can I find suitable meals?</span>
-                        <i class="fas fa-chevron-down faq-icon" style="transition: transform 0.3s ease;"></i>
+                        <i class="fas fa-chevron-down faq-icon" style="transition: transform 0.3s ease; color: #7A99C7; font-size: 0.9rem;"></i>
                     </button>
-                    <div class="faq-answer" style="padding: 0 1.5rem 1.5rem; color: #666; line-height: 1.6; display: none;">
+                    <div class="faq-answer" style="padding: 0 1.5rem 1.25rem; color: #555; line-height: 1.7; display: none; font-size: 0.95rem;">
                         Of course, we will take into account different dietary requirements and provide delicious meals that are suitable.
                     </div>
                 </div>
 
-                <div class="faq-item" style="background: white; margin-bottom: 1rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); overflow: hidden;">
-                    <button class="faq-question" style="width: 100%; padding: 1.5rem; border: none; background: none; text-align: left; cursor: pointer; font-size: 1.1rem; font-weight: 600; color: #333; display: flex; justify-content: space-between; align-items: center;">
+                <div class="faq-item" style="background: white; margin-bottom: 1rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); border: 1px solid #e8ecef; overflow: hidden; transition: all 0.3s ease;">
+                    <button class="faq-question" style="width: 100%; padding: 1.25rem 1.5rem; border: none; background: none; text-align: left; cursor: pointer; font-size: 1rem; font-weight: 600; color: #2c3e50; display: flex; justify-content: space-between; align-items: center; transition: all 0.3s ease;">
                         <span>Can I use cash for shopping in China?</span>
-                        <i class="fas fa-chevron-down faq-icon" style="transition: transform 0.3s ease;"></i>
+                        <i class="fas fa-chevron-down faq-icon" style="transition: transform 0.3s ease; color: #7A99C7; font-size: 0.9rem;"></i>
                     </button>
-                    <div class="faq-answer" style="padding: 0 1.5rem 1.5rem; color: #666; line-height: 1.6; display: none;">
+                    <div class="faq-answer" style="padding: 0 1.5rem 1.25rem; color: #555; line-height: 1.7; display: none; font-size: 0.95rem;">
                         Some shopping malls and stores in China can accept cash now, but Chinese people are more accustomed to using mobile payment. Don't worry. We will assist you in applying for WeChat and Alipay payment.
                     </div>
                 </div>
 
-                <div class="faq-item" style="background: white; margin-bottom: 1rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); overflow: hidden;">
-                    <button class="faq-question" style="width: 100%; padding: 1.5rem; border: none; background: none; text-align: left; cursor: pointer; font-size: 1.1rem; font-weight: 600; color: #333; display: flex; justify-content: space-between; align-items: center;">
+                <div class="faq-item" style="background: white; margin-bottom: 1rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); border: 1px solid #e8ecef; overflow: hidden; transition: all 0.3s ease;">
+                    <button class="faq-question" style="width: 100%; padding: 1.25rem 1.5rem; border: none; background: none; text-align: left; cursor: pointer; font-size: 1rem; font-weight: 600; color: #2c3e50; display: flex; justify-content: space-between; align-items: center; transition: all 0.3s ease;">
                         <span>Do I need the textbook?</span>
-                        <i class="fas fa-chevron-down faq-icon" style="transition: transform 0.3s ease;"></i>
+                        <i class="fas fa-chevron-down faq-icon" style="transition: transform 0.3s ease; color: #7A99C7; font-size: 0.9rem;"></i>
                     </button>
-                    <div class="faq-answer" style="padding: 0 1.5rem 1.5rem; color: #666; line-height: 1.6; display: none;">
+                    <div class="faq-answer" style="padding: 0 1.5rem 1.25rem; color: #555; line-height: 1.7; display: none; font-size: 0.95rem;">
                         We will recommend textbooks suitable for your Chinese proficiency level. You can choose to purchase them or use the free electronic versions.
                     </div>
                 </div>
 
-                <div class="faq-item" style="background: white; margin-bottom: 1rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); overflow: hidden;">
-                    <button class="faq-question" style="width: 100%; padding: 1.5rem; border: none; background: none; text-align: left; cursor: pointer; font-size: 1.1rem; font-weight: 600; color: #333; display: flex; justify-content: space-between; align-items: center;">
+                <div class="faq-item" style="background: white; margin-bottom: 1rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); border: 1px solid #e8ecef; overflow: hidden; transition: all 0.3s ease;">
+                    <button class="faq-question" style="width: 100%; padding: 1.25rem 1.5rem; border: none; background: none; text-align: left; cursor: pointer; font-size: 1rem; font-weight: 600; color: #2c3e50; display: flex; justify-content: space-between; align-items: center; transition: all 0.3s ease;">
                         <span>Can I choose my own hotel for accommodation?</span>
-                        <i class="fas fa-chevron-down faq-icon" style="transition: transform 0.3s ease;"></i>
+                        <i class="fas fa-chevron-down faq-icon" style="transition: transform 0.3s ease; color: #7A99C7; font-size: 0.9rem;"></i>
                     </button>
-                    <div class="faq-answer" style="padding: 0 1.5rem 1.5rem; color: #666; line-height: 1.6; display: none;">
+                    <div class="faq-answer" style="padding: 0 1.5rem 1.25rem; color: #555; line-height: 1.7; display: none; font-size: 0.95rem;">
                         We will provide accommodation and do our best to meet the students' requirements. However, if you really need other accommodation options, you can choose them yourself, but the cost will be your responsibility.
                     </div>
                 </div>
 
-                <div class="faq-item" style="background: white; margin-bottom: 1rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); overflow: hidden;">
-                    <button class="faq-question" style="width: 100%; padding: 1.5rem; border: none; background: none; text-align: left; cursor: pointer; font-size: 1.1rem; font-weight: 600; color: #333; display: flex; justify-content: space-between; align-items: center;">
+                <div class="faq-item" style="background: white; margin-bottom: 1rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); border: 1px solid #e8ecef; overflow: hidden; transition: all 0.3s ease;">
+                    <button class="faq-question" style="width: 100%; padding: 1.25rem 1.5rem; border: none; background: none; text-align: left; cursor: pointer; font-size: 1rem; font-weight: 600; color: #2c3e50; display: flex; justify-content: space-between; align-items: center; transition: all 0.3s ease;">
                         <span>Can I travel by myself during my free time?</span>
-                        <i class="fas fa-chevron-down faq-icon" style="transition: transform 0.3s ease;"></i>
+                        <i class="fas fa-chevron-down faq-icon" style="transition: transform 0.3s ease; color: #7A99C7; font-size: 0.9rem;"></i>
                     </button>
-                    <div class="faq-answer" style="padding: 0 1.5rem 1.5rem; color: #666; line-height: 1.6; display: none;">
+                    <div class="faq-answer" style="padding: 0 1.5rem 1.25rem; color: #555; line-height: 1.7; display: none; font-size: 0.95rem;">
                         Sure, we will also recommend you to visit wonderful attractions and try our best to offer travel advice and assistance.
                     </div>
                 </div>
@@ -213,35 +280,35 @@
                     <div class="step-number">1</div>
                     <div class="step-content">
                         <h3>Application</h3>
-                        <p>Fill in the relevant information and apply through our website, our admissions team reviews your application within 1-2 business days and contact you via email to confirm your program details.</p>
+                        <p>Fill in the relevant information and apply through our website. Our admissions team reviews your application within 1-2 business days.</p>
                     </div>
                 </div>
                 <div class="step">
                     <div class="step-number">2</div>
                     <div class="step-content">
                         <h3>Confirmation</h3>
-                        <p>After you complete the payment, we will check program details again and match an experienced and professional tutor for you.</p>
+                        <p>After payment, we verify program details and match you with an experienced tutor.</p>
                     </div>
                 </div>
                 <div class="step">
                     <div class="step-number">3</div>
                     <div class="step-content">
                         <h3>Acceptance</h3>
-                        <p>Receive your enrollment package via email. This includes program details, start dates, and next steps. Feel free to contact us via email if you have any problems or questions.</p>
+                        <p>Receive your enrollment package via email with program details, start dates, and next steps.</p>
                     </div>
                 </div>
                 <div class="step">
                     <div class="step-number">4</div>
                     <div class="step-content">
                         <h3>Visa Support</h3>
-                        <p>We assist with visa application process, including providing necessary documents and guidance for Chinese tourist visa.</p>
+                        <p>We assist with visa application, providing necessary documents and guidance for Chinese tourist visa.</p>
                     </div>
                 </div>
                 <div class="step">
                     <div class="step-number">5</div>
                     <div class="step-content">
                         <h3>Orientation</h3>
-                        <p>Welcome orientation and campus tour upon arrival. Meet your tutor, learn about campus facilities and complete the accommodation registration. Have a good rest and get ready to embark on your wonderful journey of learning Chinese in China.</p>
+                        <p>Welcome orientation and campus tour upon arrival. Meet your tutor, learn about campus facilities and complete accommodation registration.</p>
                     </div>
                 </div>
             </div>
@@ -340,13 +407,22 @@
                         }
                     });
                     
+                    document.querySelectorAll('.faq-item').forEach(otherItem => {
+                        if (otherItem !== this.closest('.faq-item')) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    
                     // Toggle current FAQ item
+                    const faqItem = this.closest('.faq-item');
                     if (isOpen) {
                         answer.style.display = 'none';
                         icon.style.transform = 'rotate(0deg)';
+                        faqItem.classList.remove('active');
                     } else {
                         answer.style.display = 'block';
                         icon.style.transform = 'rotate(180deg)';
+                        faqItem.classList.add('active');
                     }
                 });
             });
