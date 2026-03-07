@@ -2,14 +2,7 @@
 
 This is the official website for promoting Chinese language study in China, providing comprehensive study abroad information and services.
 
-## Features
 
-- 📚 Study Program Information
-- 🗺️ Study Location Options
-- 👥 Community Exchange
-- 📝 Application Process
-- ℹ️ About Us
-- 🚀 Apply Now
 
 ## Technology Stack
 
